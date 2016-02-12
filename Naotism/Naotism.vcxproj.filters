@@ -62,6 +62,24 @@
     <Image Include="Resources\Placeholder.png">
       <Filter>Samai\Naotism\Resources</Filter>
     </Image>
+    <Image Include="Resources\A-Bomb.png">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Bottle.png">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Distract1.png">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Player.png">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Rock.png">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Image>
+    <Image Include="Resources\Towel.png">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Resources\Readme.txt">
