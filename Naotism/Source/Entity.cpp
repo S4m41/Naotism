@@ -21,8 +21,6 @@ void Entity::init() {
 	
 	if(!image.loadFromFile(getFilepath()))throw -12;
 	(*texture).loadFromImage(image , sf::IntRect(0 , 0 , 64 , 64));
-	//if(!( texture ).loadFromFile("/Resources/Placeholder.png" , sf::IntRect(0 , 0 , 54 , 54)));
-	//								\\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\Naotism\Resources
 	this->setTexture(*texture);
 	txture_ptr = texture;
 }
