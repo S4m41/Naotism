@@ -21,13 +21,13 @@ public:
 	void Engine::init();
 	void Engine::init(Game* currGame);
 	void Engine::main_loop();
-	void handleWindowEvents();
-	//sf::RenderWindow getRenderWindow()const;
-	//void setRenderWindow(sf::RenderWindow windowToSet);
 
 	void operator =( const Engine& otherEngine );
 
 private:
+	
+	void handleWindowEvents();
+	void fpsCount(long double updatelength);
 
 	long double lastFpsTime;
 	int fps;
@@ -38,5 +38,5 @@ private:
 	sf::RenderWindow window;
 
 	sf::Vector2i screensize = SCREENSIZES::LARGE;
-	void fpsCount(long double updatelength);
+	
 };
