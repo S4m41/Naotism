@@ -103,7 +103,13 @@
     <ClCompile Include="Source\Util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resources\A-Bomb.png" />
+    <Image Include="Resources\Bottle.png" />
+    <Image Include="Resources\Distract1.png" />
     <Image Include="Resources\Placeholder.png" />
+    <Image Include="Resources\Player.png" />
+    <Image Include="Resources\Rock.png" />
+    <Image Include="Resources\Towel.png" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Resources\Readme.txt" />
