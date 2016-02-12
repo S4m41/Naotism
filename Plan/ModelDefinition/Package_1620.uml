@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="67fa6b7e-dd91-44cd-9248-06f5808d5fb5"
+  name="Package1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <enumeration
+        Id="d5292280-7c0d-4634-ae76-32357853ba25"
+        name="Screensizes"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="21a880ce-f476-4d37-9cae-f5e251925ff9"
+            name="Fullscreen" />
+          <enumerationLiteral
+            Id="104d59f3-cf11-4ef9-8846-49f3f7ff3ad5"
+            name="Large" />
+          <enumerationLiteral
+            Id="63345968-20bc-456e-aea1-5a5c9bd53610"
+            name="Medium" />
+          <enumerationLiteral
+            Id="b112bfac-d4a7-4e0a-9e88-7e03223b8aae"
+            name="Small" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
