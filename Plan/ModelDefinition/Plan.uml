@@ -24,6 +24,16 @@
           LastKnownLocation="Plan.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="382f7263-a060-4156-bd7f-a935ce803f26">
+      <body>Could be full class</body>
+      <annotatedElements>
+        <classMoniker
+          Id="29c6731f-86db-46c9-b5a5-536d508268d9"
+          LastKnownName="struct spritehandler"
+          LastKnownLocation="Plan.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance
@@ -1100,6 +1110,47 @@
               LastKnownLocation="Plan.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="7720a9c7-1626-4f9e-a73b-7e34ff971e0c"
+            isDerived="false"
+            sourceEndRoleName="Entity"
+            targetEndRoleName="struct spritehandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="29c6731f-86db-46c9-b5a5-536d508268d9"
+              LastKnownName="struct spritehandler"
+              LastKnownLocation="Plan.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2abf4e96-e3db-464c-a8eb-e5baa94704f3"
+                  name="Entity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="143b21b0-8715-4636-8061-f460ab7fbaf2"
+                  name="struct spritehandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="053a6297-a83b-4579-81cf-3b31f379dd4e"
@@ -2699,6 +2750,108 @@
             name="Other" />
         </ownedLiterals>
       </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="4288fd65-f060-419b-aebb-70898ecb8c60"
+        name="Spritehandler::Types"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="a3a55bb9-40c4-48cb-8e94-550f7c16bc45"
+            name="player" />
+          <enumerationLiteral
+            Id="0cd74f98-124b-46b4-99c0-d1bfc66a2b78"
+            name="placeholder" />
+          <enumerationLiteral
+            Id="7b70c92b-5932-4064-83c4-5e437c0ec1a1"
+            name="enemyTYpes..." />
+          <enumerationLiteral
+            Id="1d7a4f08-9f57-4842-b923-ddb701091a93"
+            name="distraction_1" />
+          <enumerationLiteral
+            Id="8393eede-0765-46ae-a9ea-29363bcef517"
+            name="distraction_2" />
+          <enumerationLiteral
+            Id="0f535d21-6164-481d-a16e-2c40d97d0897"
+            name="distraction_3" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="29c6731f-86db-46c9-b5a5-536d508268d9"
+        name="struct spritehandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="3febb8a4-5f9d-49a3-8aa1-4c8a68396e9c"
+            isDerived="false"
+            sourceEndRoleName="struct spritehandler"
+            targetEndRoleName="Spritehandler::Types"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="4288fd65-f060-419b-aebb-70898ecb8c60"
+              LastKnownName="Spritehandler::Types"
+              LastKnownLocation="Plan.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b0b8697-b7c8-4ca8-83e7-75a83c66a88b"
+                  name="struct spritehandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0fe502fe-789b-411e-bf64-18bd45e63f58"
+                  name="Spritehandler::Types"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="6428586f-62e3-4318-b5d4-e97980e5e88c"
+            name="spritesize"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="84d00c7c-e597-4dc5-b2bd-f3db6f6d1498"
+            name="types"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

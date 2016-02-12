@@ -15,6 +15,13 @@
         <classMoniker Id="74ebcea9-73f3-413d-8713-d11cc52c50c0" LastKnownName="Distraction" />
       </annotatedElements>
     </comment>
+    <comment Id="fa80512a-da0b-4208-9109-aa8fc40ddbde">
+      <elementDefinition Id="382f7263-a060-4156-bd7f-a935ce803f26" />
+      <body>Could be full class</body>
+      <annotatedElements>
+        <classMoniker Id="efad00ef-7c65-481a-8143-a101a69e2c66" LastKnownName="struct spritehandler" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance Id="23653004-45c8-4698-9e66-c75520dda981" name="namespace" profile="CSharpProfile">
@@ -716,6 +723,24 @@
             <elementDefinition Id="96132042-a918-4ca2-a211-440caa905d3a" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="ebcd9b69-f87e-4f3b-9bea-726141cebb5b" isDerived="false" sourceEndRoleName="Entity" targetEndRoleName="struct spritehandler" isLeaf="false" isAbstract="false">
+            <classMoniker Id="efad00ef-7c65-481a-8143-a101a69e2c66" LastKnownName="struct spritehandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4d41b8fd-e65a-46a5-a33e-0e7a2ee628c1" name="Entity" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2abf4e96-e3db-464c-a8eb-e5baa94704f3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e1337d26-3912-450f-8123-d90e8e10d6b4" name="struct spritehandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="143b21b0-8715-4636-8061-f460ab7fbaf2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7720a9c7-1626-4f9e-a73b-7e34ff971e0c" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="4efabf2c-c79c-4c99-b6c6-a61b922876e9" name="velocity" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
@@ -1471,6 +1496,62 @@
           </enumerationLiteral>
         </ownedLiterals>
       </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="259cbf61-1903-4c19-b0cc-82eaf5d9ecc6" name="Spritehandler::Types" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4288fd65-f060-419b-aebb-70898ecb8c60" />
+        <ownedLiterals>
+          <enumerationLiteral Id="0ab061e9-524d-4d79-b881-0a1b87cf3820" name="player">
+            <elementDefinition Id="a3a55bb9-40c4-48cb-8e94-550f7c16bc45" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="ea8a11e4-ae69-4d03-8116-84810f556ca4" name="placeholder">
+            <elementDefinition Id="0cd74f98-124b-46b4-99c0-d1bfc66a2b78" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="bdb1dabd-9d2e-4b64-81c8-99a26501d9ed" name="enemyTYpes...">
+            <elementDefinition Id="7b70c92b-5932-4064-83c4-5e437c0ec1a1" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="d3713063-2614-45b7-b65d-a767dfc8d3b4" name="distraction_1">
+            <elementDefinition Id="1d7a4f08-9f57-4842-b923-ddb701091a93" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="6e5114f3-4043-4a1b-a0b2-862a79898909" name="distraction_2">
+            <elementDefinition Id="8393eede-0765-46ae-a9ea-29363bcef517" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="45551583-ab7f-4a1d-866d-6ddc1a683070" name="distraction_3">
+            <elementDefinition Id="0f535d21-6164-481d-a16e-2c40d97d0897" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="efad00ef-7c65-481a-8143-a101a69e2c66" name="struct spritehandler" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="29c6731f-86db-46c9-b5a5-536d508268d9" />
+        <targetEnds>
+          <association Id="c48d7479-8302-4569-993e-e1923aad9b27" isDerived="false" sourceEndRoleName="struct spritehandler" targetEndRoleName="Spritehandler::Types" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="259cbf61-1903-4c19-b0cc-82eaf5d9ecc6" LastKnownName="Spritehandler::Types" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49ee696b-cabe-48d4-acb7-3a44c737afa7" name="struct spritehandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9b0b8697-b7c8-4ca8-83e7-75a83c66a88b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b78f0c3-0ccb-490c-8bb5-603ddc18c754" name="Spritehandler::Types" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="0fe502fe-789b-411e-bf64-18bd45e63f58" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3febb8a4-5f9d-49a3-8aa1-4c8a68396e9c" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="1fdbf8cc-2cbf-4d32-8ff0-feb618c431f3" name="spritesize" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6428586f-62e3-4318-b5d4-e97980e5e88c" />
+          </property>
+          <property Id="8aec0eb1-b41a-4ec9-84f3-20f1d1e9abee" name="types" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="84d00c7c-e597-4dc5-b2bd-f3db6f6d1498" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="d89dab9e-a1df-4a30-8c10-a59e8a552f1f" name="Plan">
