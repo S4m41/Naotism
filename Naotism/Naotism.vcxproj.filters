@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Samai">
+      <UniqueIdentifier>{01d3d70f-aeda-4534-86b5-df3991adc85a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samai\Naotism">
+      <UniqueIdentifier>{bf3b0a84-4ed9-484b-864f-e2a03bcf9bb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samai\Naotism\Resources">
+      <UniqueIdentifier>{44fc842d-c6b5-45b6-aac1-ee928638e342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samai\Naotism\Source">
+      <UniqueIdentifier>{761ffa3c-91de-4249-8563-211ac84061a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samai\Naotism\Headers">
+      <UniqueIdentifier>{59e2a920-3249-46d0-a960-371bde326324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samai\Naotism\Source\Entities">
+      <UniqueIdentifier>{bbf3b305-9bae-4d80-8e27-bc1231fce90f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Samai\Naotism\Headers\Entities">
+      <UniqueIdentifier>{d3550af7-793a-4b06-8fb6-d929c7d5d597}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\imgio.cpp">
+      <Filter>Samai</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\STFML.c">
+      <Filter>Samai</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine.cpp">
+      <Filter>Samai\Naotism\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game.cpp">
+      <Filter>Samai\Naotism\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Samai\Naotism\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Util.cpp">
+      <Filter>Samai\Naotism\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Distraction.cpp">
+      <Filter>Samai\Naotism\Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Collidable.cpp">
+      <Filter>Samai\Naotism\Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Enemy.cpp">
+      <Filter>Samai\Naotism\Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Entity.cpp">
+      <Filter>Samai\Naotism\Source\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Player.cpp">
+      <Filter>Samai\Naotism\Source\Entities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Placeholder.png">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\Readme.txt">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Util.h">
+      <Filter>Samai\Naotism\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game.h">
+      <Filter>Samai\Naotism\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Engine.h">
+      <Filter>Samai\Naotism\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Distraction.h">
+      <Filter>Samai\Naotism\Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Collidable.h">
+      <Filter>Samai\Naotism\Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Enemy.h">
+      <Filter>Samai\Naotism\Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Entity.h">
+      <Filter>Samai\Naotism\Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Player.h">
+      <Filter>Samai\Naotism\Headers\Entities</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

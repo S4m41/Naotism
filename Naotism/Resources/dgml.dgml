@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @10)" Category="CodeSchema_ProjectItem" Bounds="1723.77253502574,223.958233335274,99.1480000770791,25.998000077079" FilePath="$(VsSolutionUri)/Naotism/Engine.cpp" Label="Engine.cpp" />
+    <Node Id="(@1 @11)" Category="CodeSchema_ProjectItem" Bounds="1488.19966820491,223.958233335274,81.3713334104123,25.998000077079" FilePath="$(VsSolutionUri)/Naotism/Util.cpp" Label="Util.cpp" />
+    <Node Id="(@1 @18)" Category="CodeSchema_ProjectItem" Bounds="1738.88083313203,-21.3634751869423,157.854666743746,25.998000077079" FilePath="$(VsSolutionUri)/Naotism/Naotism.vcxproj.filters" Label="Naotism.vcxproj.filters" UseManualLocation="True" />
+    <Node Id="(@1 @19)" Category="CodeSchema_ProjectItem" Bounds="1927.95763959283,-34.0063490106655,100.478000077079,25.998000077079" FilePath="$(VsSolutionUri)/Naotism/Readme.txt" Label="Readme.txt" UseManualLocation="True" />
+    <Node Id="(@1 @8)" Category="CodeSchema_ProjectItem" Bounds="1395.20372786699,167.960233258195,68.5113334104124,25.998000077079" FilePath="$(VsSolutionUri)/Naotism/Util.h" Label="Util.h" />
+    <Node Id="(@1 @9)" Category="CodeSchema_ProjectItem" Bounds="1599.57110161532,223.960233258195,94.2013334104124,25.998000077079" FilePath="$(VsSolutionUri)/Naotism/Game.cpp" Label="Game.cpp" />
+    <Node Id="(@20 @21 @22 Member=(Name=&quot;operator=&quot; OverloadingParameters=[(Type=&quot;const Engine &amp;&quot;)]))" Category="CodeSchema_Method" Bounds="923.274033333333,279.958233335274,250.483333333333,26" CodeSchemaProperty_IsPublic="True" Icon="ec60b8f5-b985-4a1f-97e0-f3796ca065f4" Label="operator=‎(const Engine &amp; otherEngine‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_IsOperator="True" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @22 Member=(Name=draw OverloadingParameters=[(Type=double)]))" Category="CodeSchema_Method" Bounds="862.517306046367,335.958233335274,141.093333333333,26" CodeSchemaProperty_IsProtected="True" Icon="d91a3aca-eef1-47f5-8dd8-0722aaa123aa" Label="draw‎(double delta‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @22 Member=(Name=fpsCount OverloadingParameters=[(Type=&quot;long double&quot;)]))" Category="CodeSchema_Method" Bounds="1317.89756666667,279.958233335274,234.996666666667,26" CodeSchemaProperty_IsPrivate="True" Icon="ea3741e4-bc8d-45a1-810d-e618d6cc8e80" Label="fpsCount‎(long double updatelength‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @22 Member=(Name=init OverloadingParameters=[(Type=&quot;Game *&quot;)]))" Category="CodeSchema_Method" Bounds="673.443872713034,335.958233335274,159.073333333333,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="init‎(Game * currGame‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @22 Member=(Name=update OverloadingParameters=[(Type=double)]))" Category="CodeSchema_Method" Bounds="651.736825835347,391.958233335274,152.433333333333,26" CodeSchemaProperty_IsProtected="True" Icon="d91a3aca-eef1-47f5-8dd8-0722aaa123aa" Label="update‎(double delta‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @22 Member=Engine)" Category="CodeSchema_Method" Bounds="1203.75746666667,279.958233335274,84.1400000000001,26" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="Engine‎(‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" />
+    <Node Id="(@20 @21 @22 Member=TARGET_FPS)" Category="CodeSchema_Field" Bounds="315.1802,279.958233335274,106.726666666667,26" CodeSchemaProperty_IsPrivate="True" Icon="bb90340a-9a8f-48e0-b5e5-a40ad84561ed" Label="TARGET_FPS" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_IsConst="True" NativeProvider_Type="int" />
+    <Node Id="(@20 @21 @22 Member=________myGameObject)" Category="CodeSchema_Field" Bounds="122.3501,279.958233335274,162.83,26" CodeSchemaProperty_IsPrivate="True" Icon="0c366f4e-c08c-4e52-87f1-b783522f3789" Label="________myGameObject" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_Type="Game" />
+    <Node Id="(@20 @21 @22 Member=fps)" Category="CodeSchema_Field" Bounds="836.3706,279.958233335274,56.9033333333333,26" CodeSchemaProperty_IsPrivate="True" Icon="0c366f4e-c08c-4e52-87f1-b783522f3789" Label="fps" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_Type="int" />
+    <Node Id="(@20 @21 @22 Member=init)" Category="CodeSchema_Method" Bounds="578.533772713034,335.958233335274,64.91,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="init‎(‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @22 Member=lastFpsTime)" Category="CodeSchema_Field" Bounds="451.906966666667,279.958233335274,102.986666666667,26" CodeSchemaProperty_IsPrivate="True" Icon="0c366f4e-c08c-4e52-87f1-b783522f3789" Label="lastFpsTime" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_Type="long double" />
+    <Node Id="(@20 @21 @22 Member=main_loop)" Category="CodeSchema_Method" Bounds="584.893733333333,279.958233335274,103.38,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="main_loop‎(‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @22 Member=myGame)" Category="CodeSchema_Field" Bounds="718.273833333334,279.958233335274,88.0966666666667,26" CodeSchemaProperty_IsPrivate="True" Icon="0c366f4e-c08c-4e52-87f1-b783522f3789" Label="myGame" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_Type="Game *" />
+    <Node Id="(@20 @21 @22 Member=~Engine)" Category="CodeSchema_Method" Bounds="0,279.958233335274,92.35,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="~Engine‎(‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_IsDestructor="True" />
+    <Node Id="(@20 @21 @24 Member=(Name=&quot;operator=&quot; OverloadingParameters=[(Type=&quot;const Game &amp;&quot;)]))" Category="CodeSchema_Method" Bounds="1975.94463333333,320.763687009064,240.59,26" CodeSchemaProperty_IsPublic="True" Icon="ec60b8f5-b985-4a1f-97e0-f3796ca065f4" Label="operator=‎(const Game &amp; otherGame‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_IsOperator="True" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @24 Member=(Name=draw OverloadingParameters=[(Type=double)]))" Category="CodeSchema_Method" Bounds="2438.2716,279.958233335274,141.093333333333,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="draw‎(double delta‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @24 Member=(Name=update OverloadingParameters=[(Type=double)]))" Category="CodeSchema_Method" Bounds="2609.36503333333,279.958233335274,152.433333333333,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="update‎(double delta‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @24 Member=Game)" Category="CodeSchema_Method" Bounds="2246.53473333333,335.958233335274,79.1933333333332,26" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="Game‎(‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" />
+    <Node Id="(@20 @21 @24 Member=error)" Category="CodeSchema_Field" Bounds="2341.44483333333,279.958233335274,66.8266666666668,26" CodeSchemaProperty_IsPrivate="True" Icon="0c366f4e-c08c-4e52-87f1-b783522f3789" Label="error" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_Type="int" />
+    <Node Id="(@20 @21 @24 Member=gameRunning)" Category="CodeSchema_Field" Bounds="1582.89433333333,279.958233335274,115.096666666667,26" CodeSchemaProperty_IsPrivate="True" Icon="0c366f4e-c08c-4e52-87f1-b783522f3789" Label="gameRunning" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_Type="bool" />
+    <Node Id="(@20 @21 @24 Member=init)" Category="CodeSchema_Method" Bounds="2246.53473333333,279.958233335274,64.9099999999999,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="init‎(‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_ReturnType="void" />
+    <Node Id="(@20 @21 @24 Member=isRunning)" Category="CodeSchema_Method" Bounds="1845.39453333333,279.958233335274,100.55,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="isRunning‎(‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_IsConst="True" NativeProvider_ReturnType="bool" />
+    <Node Id="(@20 @21 @24 Member=~Game)" Category="CodeSchema_Method" Bounds="1727.9911,279.958233335274,87.4033333333334,26" CodeSchemaProperty_IsPublic="True" Icon="0ae80030-0a78-4c03-ae31-b3364b12f48e" Label="~Game‎(‎)" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_IsDestructor="True" />
+    <Node Id="(@3)" Category="CodeSchema_Solution" Bounds="1558.83883971679,0,70.45,25.96" Label="CPlusPlus" />
+    <Node Id="@13" Category="ProjectFolder" Bounds="1592.22712494091,167.960233258195,103.514666743746,25.998000077079" FilePath="Source Files" Label="Source Files">
+      <Category Ref="CodeSchema_ProjectItem" />
+    </Node>
+    <Node Id="@15" Category="ProjectFolder" Bounds="1840.59215718802,34.6346248901367,115.688000077079,25.998000077079" FilePath="Resource Files" Label="Resource Files" UseManualLocation="True">
+      <Category Ref="CodeSchema_ProjectItem" />
+    </Node>
+    <Node Id="@17" Category="ProjectFolder" Bounds="1433.74146393008,111.962233181116,105.748000077079,25.998000077079" FilePath="Header Files" Label="Header Files">
+      <Category Ref="CodeSchema_ProjectItem" />
+    </Node>
+    <Node Id="@2" Category="CodeSchema_Project" Bounds="1615.5715291773,55.9600000000001,85.5188998477829,26.0022331811163" Label="Naotism" />
+    <Node Id="@23" Category="CodeSchema_Class" Bounds="710.323253433593,223.958233335274,76.9,26" CodeSchemaProperty_IsPublic="True" Icon="f6123b5c-b5b9-4f10-b6d9-27acdb799617" Label="Engine" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_TypeName="Engine" />
+    <Node Id="@25" Category="CodeSchema_Class" Bounds="2098.71415871267,223.958233335274,71.9533333333334,26" CodeSchemaProperty_IsPublic="True" Icon="f6123b5c-b5b9-4f10-b6d9-27acdb799617" Label="Game" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" NativeProvider_CodeItemIds="Microsoft.VisualStudio.Progression.SmallList`1[System.Int64]" NativeProvider_TypeName="Game" />
+    <Node Id="@5" Category="CodeSchema_ProjectItem" Bounds="1732.64443721042,167.960233258195,81.3413334104123,25.998000077079" FilePath="$(VsSolutionUri)/Naotism/Game.h" Label="Game.h" />
+    <Node Id="@7" Category="CodeSchema_ProjectItem" Bounds="1148.79548781484,167.960233258195,86.288000077079,25.998000077079" FilePath="$(VsSolutionUri)/Naotism/Engine.h" Label="Engine.h" />
+  </Nodes>
+  <Links>
+    <Link Source="(@3)" Target="@2" Category="Contains" Bounds="1608.96507259503,25.96,27.654051547157,24.0885832746195" />
+    <Link Source="@13" Target="(@1 @10)" Category="Contains" Bounds="1674.01370289944,193.958233335274,61.0442155983335,26.4246993834784" />
+    <Link Source="@13" Target="(@1 @11)" Category="Contains" Bounds="1563.69668300245,193.958233335274,53.5694370216866,26.0625906591402" />
+    <Link Source="@13" Target="(@1 @9)" Category="Contains" Bounds="1644.60825015018,193.958233335274,1.00833364820619,21.0123447375678" />
+    <Link Source="@15" Target="(@1 @19)" Category="Contains" Bounds="1913.54093331299,-2.13768720755374,42.7292492881948,36.7723102921832" />
+    <Link Source="@17" Target="(@1 @8)" Category="Contains" Bounds="1449.15597702731,137.960233258195,24.1916604606411,23.7015004468554" />
+    <Link Source="@17" Target="@5" Category="Contains" Bounds="1539.47183616983,135.285108987093,184.339473319618,36.0050818729989" />
+    <Link Source="@17" Target="@7" Category="Contains" Bounds="1243.92525532527,135.0089342908,189.816603929286,36.0713158282924" />
+    <Link Source="@2" Target="(@1 @18)" Category="Contains" Bounds="1685.14464312827,8.56112320919355,97.7559784451814,47.3988769910198" />
+    <Link Source="@2" Target="@13" Category="Contains" Bounds="1646.79313455328,81.9622333813296,9.87246975320363,77.0709447716569" />
+    <Link Source="@2" Target="@15" Category="Contains" Bounds="1701.09044357624,53.5679499779705,130.5370098479,11.5950318343436" />
+    <Link Source="@2" Target="@17" Category="Contains" Bounds="1535.03133989225,81.9605264598995,83.4390177946702,27.2112561285661" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=(Name=&quot;operator=&quot; OverloadingParameters=[(Type=&quot;const Engine &amp;&quot;)]))" Category="Contains" Bounds="787.223253433593,244.141733785962,182.862452439607,34.1636543436609" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=(Name=draw OverloadingParameters=[(Type=double)]))" Category="Contains" Bounds="775.564270019531,249.958236694336,106.64501953125,83.3444061279297" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=(Name=fpsCount OverloadingParameters=[(Type=&quot;long double&quot;)]))" Category="Contains" Bounds="787.223266601563,239.978088378906,521.96435546875,41.0091552734375" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=(Name=init OverloadingParameters=[(Type=&quot;Game *&quot;)]))" Category="Contains" Bounds="708.140380859375,249.958236694336,27.5147705078125,79.2263946533203" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=(Name=update OverloadingParameters=[(Type=double)]))" Category="Contains" Bounds="663.309692382813,249.958236694336,74.9011840820313,137.871536254883" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=Engine)" Category="Contains" Bounds="787.223266601563,240.585876464844,409.7080078125,38.6546936035156" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=TARGET_FPS)" Category="Contains" Bounds="430.788208007813,241.860778808594,279.535034179688,40.888916015625" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=________myGameObject)" Category="Contains" Bounds="274.603790283203,240.38037109375,435.719451904297,38.7799987792969" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=fps)" Category="Contains" Bounds="775.713202934128,249.958233335274,54.4765398819842,26.2879118779243" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=init)" Category="Contains" Bounds="645.342895507813,249.958236694336,92.8679809570313,82.0066375732422" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=lastFpsTime)" Category="Contains" Bounds="563.179701168924,245.733446617217,147.143552264669,33.5816919163893" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=main_loop)" Category="Contains" Bounds="670.680292566243,249.958233335274,52.0489651297896,25.9805197906491" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=myGame)" Category="Contains" Bounds="751.9185368627,249.958233335274,5.14190688647864,21.2523898182408" />
+    <Link Source="@23" Target="(@20 @21 @22 Member=~Engine)" Category="Contains" Bounds="99.7381439208984,239.491348266602,610.585098266602,40.2258453369141" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=(Name=&quot;operator=&quot; OverloadingParameters=[(Type=&quot;const Game &amp;&quot;)]))" Category="Contains" Bounds="2104.72556363057,249.958233335274,24.8016529062056,62.4411138820441" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=(Name=draw OverloadingParameters=[(Type=double)]))" Category="Contains" Bounds="2170.66749204601,242.343278940058,258.754463479187,38.7307862395106" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=(Name=update OverloadingParameters=[(Type=double)]))" Category="Contains" Bounds="2170.66748046875,240.106750488281,446.39990234375,39.0668334960938" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=Game)" Category="Contains" Bounds="2152.26874921924,249.958233335274,109.048641638826,80.6484516724918" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=error)" Category="Contains" Bounds="2170.66749204601,245.346939820238,162.01245517383,37.7765662937506" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=gameRunning)" Category="Contains" Bounds="1698.08984375,240.430267333984,400.624267578125,38.6634216308594" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=init)" Category="Contains" Bounds="2168.10582584685,249.926037823282,71.0162035640315,27.5602044116214" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=isRunning)" Category="Contains" Bounds="1954.20528803448,245.387161637384,144.508870678195,33.8568028342061" />
+    <Link Source="@25" Target="(@20 @21 @24 Member=~Game)" Category="Contains" Bounds="1818.37109375,241.71467590332,280.343017578125,37.0639495849609" />
+    <Link Source="@5" Target="@25" Category="Contains" Bounds="1813.98573018177,187.261587085694,275.834548663963,42.7434873355615" />
+    <Link Source="@7" Target="@23" Category="Contains" Bounds="796.152250453305,186.410959245541,352.643237361535,44.5604090042055" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_Field" Label="Field" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Fields" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
+    <Category Id="CodeSchema_Project" Label="Project" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_ProjectItem" Icon="CodeSchema_Project" NavigationActionLabel="Projects" />
+    <Category Id="CodeSchema_ProjectItem" Label="Project Item" BasedOn="File" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="File" NavigationActionLabel="Project Items" />
+    <Category Id="CodeSchema_Solution" Label="Solution" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" NavigationActionLabel="Solutions" />
+    <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+    <Category Id="ProjectFolder" Label="Project Folder" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" NavigationActionLabel="Folders" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsConstructor" Label="Is Constructor" Description="Flag to indicate the method is a constructor" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPrivate" Label="Is Private" Description="Flag to indicate the scope is Private" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsProtected" Label="Is Protected" Description="Flag to indicate the scope is Protected" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="NativeProvider_CodeItemIds" Label="NodeIds" Description="NodeIds" DataType="Microsoft.VisualStudio.Progression.SmallList`1[[System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" />
+    <Property Id="NativeProvider_IsConst" Label="IsConst" Description="IsConst" DataType="System.Boolean" />
+    <Property Id="NativeProvider_IsDestructor" Label="IsDestructor" Description="IsDestructor" DataType="System.Boolean" />
+    <Property Id="NativeProvider_IsOperator" Label="IsOperator" Description="IsOperator" DataType="System.Boolean" />
+    <Property Id="NativeProvider_ReturnType" Label="Return Type" Description="Return Type" DataType="System.String" />
+    <Property Id="NativeProvider_Type" Label="Type" Description="Type" DataType="System.String" />
+    <Property Id="NativeProvider_TypeName" Label="TypeName" Description="TypeName" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="File" Label="File" ValueType="Uri" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(VsSolutionUri)/Naotism/Naotism.vcxproj" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Uri="Assembly=$(VsSolutionUri)/CPlusPlus.sln" />
+    <Alias n="4" Uri="File=$(VsSolutionUri)/Naotism/Game.h" />
+    <Alias n="5" Id="(@1 @4)" />
+    <Alias n="6" Uri="File=$(VsSolutionUri)/Naotism/Engine.h" />
+    <Alias n="7" Id="(@1 @6)" />
+    <Alias n="8" Uri="File=$(VsSolutionUri)/Naotism/Util.h" />
+    <Alias n="9" Uri="File=$(VsSolutionUri)/Naotism/Game.cpp" />
+    <Alias n="10" Uri="File=$(VsSolutionUri)/Naotism/Engine.cpp" />
+    <Alias n="11" Uri="File=$(VsSolutionUri)/Naotism/Util.cpp" />
+    <Alias n="12" Uri="File=Source Files" />
+    <Alias n="13" Id="(@1 @12)" />
+    <Alias n="14" Uri="File=Resource Files" />
+    <Alias n="15" Id="(@1 @14)" />
+    <Alias n="16" Uri="File=Header Files" />
+    <Alias n="17" Id="(@1 @16)" />
+    <Alias n="18" Uri="File=$(VsSolutionUri)/Naotism/Naotism.vcxproj.filters" />
+    <Alias n="19" Uri="File=$(VsSolutionUri)/Naotism/Readme.txt" />
+    <Alias n="20" Uri="Assembly=$(398700ee-f8a5-4a33-9e06-28c24ae922e5.OutputPathUri)" />
+    <Alias n="21" Id="Namespace=::" />
+    <Alias n="22" Id="Type=Engine" />
+    <Alias n="23" Id="(@20 @21 @22)" />
+    <Alias n="24" Id="Type=Game" />
+    <Alias n="25" Id="(@20 @21 @24)" />
+  </IdentifierAliases>
+  <Paths>
+    <Path Id="398700ee-f8a5-4a33-9e06-28c24ae922e5.OutputPathUri" Value="file://storage10.student.bth.se/students/20152/silg15/visual studio 2013/Projects/CPlusPlus/Debug/Naotism.exe" />
+    <Path Id="VsSolutionUri" Value="file://storage10.student.bth.se/students/20152/silg15/visual studio 2013/Projects/CPlusPlus" />
+  </Paths>
+</DirectedGraph>

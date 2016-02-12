@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-02-06T14:35:15" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2016-02-06T14:35:16" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2016-02-06T14:35:16" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-02-06T14:35:16" Importance="Diagnostic" Text="ProjectPath = ..\PlanLib\PlanLib.csproj" />
+  <Message Timestamp="2016-02-06T14:35:16" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-02-06T14:35:16" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-02-06T14:35:16" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-02-06T14:35:16" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-02-06T14:35:16" Importance="Medium" Text="Plan's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'Plan::Engine' -  (Class), 'Plan::sf::Sprite' -  (Class), 'Plan::sf::Drawable' -  (Class), 'Plan::Game' -  (Class), 'Plan::Entity' -  (Class), 'Plan::Collidable' -  (Class), 'Plan::Distraction' -  (Class), 'Plan::Enemy' -  (Class), 'Plan::Player' -  (Class) " />
+  <Message Timestamp="2016-02-06T14:35:26" Importance="Medium" Text="Project Added: \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\PlanLib.csproj" />
+  <Message Timestamp="2016-02-06T14:35:26" Importance="Medium" Text="'Plan::Engine' -  (Class) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\Engine.cs" />
+  <Message Timestamp="2016-02-06T14:35:27" Importance="Diagnostic" Text="'Plan::sf::Sprite' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:28" Importance="Diagnostic" Text="'Plan::sf::Drawable' -  (Class): no file generated because the 'AppliesToElement' method of the template 'ClassTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:28" Importance="Medium" Text="'Plan::Game' -  (Class) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\Game.cs" />
+  <Message Timestamp="2016-02-06T14:35:29" Importance="Medium" Text="'Plan::Entity' -  (Class) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\Entity.cs" />
+  <Message Timestamp="2016-02-06T14:35:30" Importance="Medium" Text="'Plan::Collidable' -  (Class) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\Collidable.cs" />
+  <Message Timestamp="2016-02-06T14:35:30" Importance="Medium" Text="'Plan::Distraction' -  (Class) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\Distraction.cs" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Medium" Text="'Plan::Enemy' -  (Class) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\Enemy.cs" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Medium" Text="'Plan::Player' -  (Class) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\Player.cs" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Diagnostic" Text="Name = EnumTemplate" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Diagnostic" Text="ProjectPath = ..\PlanLib\PlanLib.csproj" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2016-02-06T14:35:31" Importance="Medium" Text="Plan's Text Template Binding: 'EnumTemplate' will apply EnumTemplate.t4 to: 'Plan::Distractiontype' -  (Enumeration), 'Plan::EnemyType' -  (Enumeration) " />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Medium" Text="'Plan::Distractiontype' -  (Enumeration) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\Distractiontype.cs" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Medium" Text="'Plan::EnemyType' -  (Enumeration) : success (file created) - \\storage10.student.bth.se\students\20152\silg15\visual studio 2013\Projects\Naotism\PlanLib\GeneratedCode\EnemyType.cs" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Diagnostic" Text="ProjectPath = ..\PlanLib\PlanLib.csproj" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-02-06T14:35:32" Importance="Medium" Text="Plan's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'Plan::Engine' -  (Class), 'Plan::sf::Sprite' -  (Class), 'Plan::sf::Drawable' -  (Class), 'Plan::Game' -  (Class), 'Plan::Entity' -  (Class), 'Plan::Collidable' -  (Class), 'Plan::Distraction' -  (Class), 'Plan::Enemy' -  (Class), 'Plan::Player' -  (Class) " />
+  <Message Timestamp="2016-02-06T14:35:33" Importance="Diagnostic" Text="'Plan::Engine' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:33" Importance="Diagnostic" Text="'Plan::sf::Sprite' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:33" Importance="Diagnostic" Text="'Plan::sf::Drawable' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:33" Importance="Diagnostic" Text="'Plan::Game' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:33" Importance="Diagnostic" Text="'Plan::Entity' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:33" Importance="Diagnostic" Text="'Plan::Collidable' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:33" Importance="Diagnostic" Text="'Plan::Distraction' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:33" Importance="Diagnostic" Text="'Plan::Enemy' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'Plan::Player' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="The selection included 11 elements which were not bound to a template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'Plan::' -  (Association): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'Plan::' -  (Association): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'89ec0813-e225-4534-ba78-b34488a8d5d2' -  (Comment): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'Plan::' -  (Association): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'Plan::' -  (Association): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'872b8bf4-633d-4cad-a423-0436a77229c9' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'96132042-a918-4ca2-a211-440caa905d3a' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'Plan::' -  (Association): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'08afed8d-95ea-425a-855b-53da572d7e28' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'6173a8ba-600d-4d07-a8df-c55bb24e3fcf' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="Diagnostic" Text="'Plan::' -  (Association): no bound template." />
+  <Message Timestamp="2016-02-06T14:35:34" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>
