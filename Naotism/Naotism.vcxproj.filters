@@ -80,6 +80,9 @@
     <Image Include="Resources\Towel.png">
       <Filter>Samai\Naotism\Resources</Filter>
     </Image>
+    <Image Include="Resources\spritesheet.png">
+      <Filter>Samai\Naotism\Resources</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Resources\Readme.txt">

@@ -109,6 +109,7 @@
     <Image Include="Resources\Placeholder.png" />
     <Image Include="Resources\Player.png" />
     <Image Include="Resources\Rock.png" />
+    <Image Include="Resources\spritesheet.png" />
     <Image Include="Resources\Towel.png" />
   </ItemGroup>
   <ItemGroup>
