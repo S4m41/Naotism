@@ -33,6 +33,6 @@ protected:
 private:
 	virtual void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const;
 	int error;
-	void scarySprite(sf::RenderTarget& canvas)const;//for testing
+	void scarySprite(sf::RenderTarget& canvas)const;
 
 };

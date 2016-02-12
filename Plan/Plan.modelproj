@@ -37,9 +37,6 @@
       <DependentUpon>Logic.activitydiagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
-    <Content Include="ModelDefinition\Package_1620.uml">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="ModelDefinition\Plan.uml">
       <SubType>Content</SubType>
     </Content>
