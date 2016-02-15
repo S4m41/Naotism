@@ -1,4 +1,7 @@
 #include "Player.h"
+Player::Player(float x , float y , sf::Vector2f velocity , int mass) : Collidable(float x , float y , sf::Vector2f velocity , int mass) {
+	score = 0;
+}
 void Player::update(double delta) {
 	score += (int) ( delta += 0.5 );
 	sf::Vector2f vel = getVelocity();
