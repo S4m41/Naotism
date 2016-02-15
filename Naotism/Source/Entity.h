@@ -13,7 +13,7 @@ public:
 	virtual void init();
 	virtual void update(double delta);
 protected:
-	const virtual std::string getFilepath()const;
+	const sf::Vector2i Entity::getType()const;
 
 	typedef  const struct __t {
 		const sf::Vector2i spritesize = sf::Vector2i(64 , 64);
