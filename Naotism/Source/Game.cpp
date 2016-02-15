@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Player.h"
 
 Game::Game() {
 	error = Errors::Fine;
@@ -10,7 +11,7 @@ Game::~Game() {
 }
 void Game::init() {
 
-	Entity* ent_ptr = new Entity();
+	Entity* ent_ptr = new Player();
 	try {
 		ent_ptr->init();
 	} catch(int i) {

@@ -12,3 +12,6 @@ void Player::update(double delta) {
 	}
 
 }
+const sf::Vector2i Player::getType()const {
+	return this->texture_strct.PLAYER;
+}

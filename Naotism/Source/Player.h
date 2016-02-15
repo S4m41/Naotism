@@ -2,10 +2,10 @@
 #include "Collidable.h"
 class Player : public Collidable{
 public:
-	Player::Player(float x , float y , sf::Vector2f velocity , int mass);
+	Player::Player(float x = 0 , float y = 0 , sf::Vector2f velocity = sf::Vector2f(0 , 0) , int mass = 0);
 	virtual void Player::update(double delta);//override
 protected:
-	//const virtual std::string getFilepath()const;
+	const virtual sf::Vector2i Player::getType()const;
 private:
 	int score;
 };
