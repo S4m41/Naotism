@@ -31,6 +31,7 @@ void Entity::init() {
 	txture_ptr = texture;
 }
 void Entity::update(double delta) {
+	move(velocity);
 }
 const sf::Vector2i Entity::getType()const {
 	return this->texture_strct.PLACEHOLDER;

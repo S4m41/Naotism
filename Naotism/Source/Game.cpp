@@ -12,7 +12,7 @@ Game::~Game() {
 }
 void Game::init() {
 
-	Entity* ent_ptr = new Enemy(1); ///FIX why does not this work player and enemy are
+	//Entity* ent_ptr = new Enemy(1);
 	Entity* ent_ptr = new Player(1);
 	try {
 		ent_ptr->init();
