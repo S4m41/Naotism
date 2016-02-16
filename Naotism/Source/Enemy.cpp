@@ -2,7 +2,7 @@
 Enemy::Enemy(int type , float x , float y , sf::Vector2f velocity , int mass) : Collidable(x , y , velocity , mass) , type(type){}
 
 void Enemy::update(double delta) {
-	this->move(getVelocity());
+	Collidable::update(delta);
 	//screenwrap logic here
 }
 const sf::Vector2i Enemy::getType()const {

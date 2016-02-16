@@ -10,9 +10,11 @@ void Player::update(double delta) {
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 		vel.y -= ( 1 * delta );
-	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
 		vel.y += ( 1 * delta );
 	}
+	setVelocity(vel);
+	Collidable::update(delta);
 }
 const sf::Vector2i Player::getType()const {
 	return this->texture_strct.PLAYER;
