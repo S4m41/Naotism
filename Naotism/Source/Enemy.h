@@ -1,8 +1,12 @@
 #pragma once
 #include "Collidable.h"
-class Enemy : Collidable{
+class Enemy :public Collidable{
 public:
-	virtual void update(double delta);
+public:
+	Enemy::Enemy(int type = 1 , float x = 0 , float y = 0 , sf::Vector2f velocity = sf::Vector2f(0 , 0) , int mass = 0);
+	virtual void Enemy::update(double delta);
 protected:
-	//const virtual std::string getFilepath()const;
+	const virtual sf::Vector2i Enemy::getType()const;
+private:
+	int type;
 };
