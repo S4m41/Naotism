@@ -4,9 +4,10 @@
 class Entity : public sf::Sprite{
 public:
 	Entity::Entity(float x = 0 , float y = 0 , sf::Vector2f velocity = sf::Vector2f(0 , 0));
+	Entity::Entity(const Entity* /*&*/ other);
 	virtual ~Entity();
 
-	sf::Vector2f Entity::getVelocity();
+	sf::Vector2f Entity::getVelocity()const;
 	void Entity::setVelocity(sf::Vector2f);
 	void Entity::setVelocity(float x , float y);
 
