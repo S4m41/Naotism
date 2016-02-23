@@ -17,6 +17,8 @@ void Engine::init(Game* currGame) {
 	lastFpsTime = 0;
 	fps = 0;
 	window.create(sf::VideoMode(screensize.x , screensize.y) , "Naotism" , sf::Style::Titlebar | sf::Style::Close);
+	window.setFramerateLimit(65);
+	window.setVerticalSyncEnabled(false);
 	currGame->init();
 
 	//currGame->problem(Errors::Close);

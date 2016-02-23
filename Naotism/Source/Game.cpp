@@ -1,7 +1,7 @@
 #include "Game.h"
 #include "Player.h"
 #include "Enemy.h"
-
+#include "Engine.h"//noo don't
 Game::Game() {
 	error = Errors::Fine;
 }
@@ -13,7 +13,7 @@ Game::~Game() {
 void Game::init() {
 
 	//Entity* ent_ptr = new Enemy(1);
-	Entity* ent_ptr = new Player(1520/2 , 800-64);
+	Entity* ent_ptr = new Player(SCREENSIZES::LARGE.x / 2 , SCREENSIZES::LARGE.y - 64);
 	try {
 		ent_ptr->init();
 	} catch(int i) {
@@ -22,7 +22,7 @@ void Game::init() {
 		}
 		error = error | Errors::Read;
 	}
-	
+
 	this->entitylist.push_back(ent_ptr);
 }
 //################################################
@@ -49,9 +49,9 @@ bool Game::isRunning() const {
 void Game::problem(Errors ErrorCode) {
 	error = error | ErrorCode;
 }
-int Game::getErrors() const{
+int Game::getErrors() const {
 	return error;
 }
-void Game::operator =( const Game& otherGame ){
+void Game::operator =( const Game& otherGame ) {
 	this->error = otherGame.error;
 }
