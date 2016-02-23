@@ -12,6 +12,7 @@
 
 ## >Dev< ##
 -remove first int arg in player
+-Clone() clone texture
 -Performance issues dropping to 15 fps at fullscreen
 -implement collisions
 -implement distractions
