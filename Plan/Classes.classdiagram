@@ -15,8 +15,6 @@
         <classMoniker Id="74ebcea9-73f3-413d-8713-d11cc52c50c0" LastKnownName="Distraction" />
       </annotatedElements>
     </comment>
-<<<<<<< HEAD
-=======
     <comment Id="fa80512a-da0b-4208-9109-aa8fc40ddbde">
       <elementDefinition Id="382f7263-a060-4156-bd7f-a935ce803f26" />
       <body>Could be full class</body>
@@ -24,7 +22,6 @@
         <classMoniker Id="efad00ef-7c65-481a-8143-a101a69e2c66" LastKnownName="struct spritehandler" />
       </annotatedElements>
     </comment>
->>>>>>> refs/remotes/origin/Local
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance Id="23653004-45c8-4698-9e66-c75520dda981" name="namespace" profile="CSharpProfile">
@@ -1500,8 +1497,7 @@
         </ownedLiterals>
       </enumeration>
     </logicalClassDesignerModelHasTypes>
-<<<<<<< HEAD
-=======
+
     <logicalClassDesignerModelHasTypes>
       <enumeration Id="259cbf61-1903-4c19-b0cc-82eaf5d9ecc6" name="Spritehandler::Types" isAbstract="false" isLeaf="false">
         <elementDefinition Id="4288fd65-f060-419b-aebb-70898ecb8c60" />

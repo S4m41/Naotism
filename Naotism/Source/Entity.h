@@ -4,14 +4,17 @@
 class Entity : public sf::Sprite{
 public:
 	Entity::Entity(float x = 0 , float y = 0 , sf::Vector2f velocity = sf::Vector2f(0 , 0));
+	Entity::Entity(const Entity* /*&*/ other);
 	virtual ~Entity();
 
-	sf::Vector2f Entity::getVelocity();
+	sf::Vector2f Entity::getVelocity()const;
 	void Entity::setVelocity(sf::Vector2f);
 	void Entity::setVelocity(float x , float y);
 
 	virtual void init();
 	virtual void update(double delta);
+	// Current implementation does not clone texture
+	virtual Entity* Entity::clone()const = 0;
 protected:
 	const virtual sf::Vector2i Entity::getType()const;
 
