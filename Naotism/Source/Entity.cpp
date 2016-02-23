@@ -10,7 +10,7 @@ Entity::Entity(const Entity* /*&*/ other):sf::Sprite() {
 Entity::~Entity() {
 	delete txture_ptr;
 }
-sf::Vector2f Entity::getVelocity() {
+sf::Vector2f Entity::getVelocity()const {
 	return this->velocity;
 }
 void Entity::setVelocity(sf::Vector2f toSet) {

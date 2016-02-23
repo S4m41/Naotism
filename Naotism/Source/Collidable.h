@@ -3,12 +3,15 @@
 class Collidable : public Entity{
 public:
 	Collidable(float x = 0 , float y = 0 , sf::Vector2f velocity = sf::Vector2f(0 , 0),int mass = 1) ;
-	bool Collidable::isColliding(Collidable other);
-	void Collidable::Collide(Collidable other);
 	Collidable(const Collidable* /*&*/ other);
+	bool Collidable::isColliding(const Collidable*& other)const;
+	virtual void Collidable::collide(const Collidable*& other)const = 0;
 	void Collidable::setMass(int mass);
-	int Collidable::getMass();
+	int Collidable::getMass()const;
+	void Collidable::update(double delta);
 private:
 	int mass;
+
+	
 
 };

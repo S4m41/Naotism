@@ -7,7 +7,7 @@ Player::Player(const Player* /*&*/other) : Collidable(other){
 void Player::update(double delta) {
 	score += (int) ( delta += 0.5 );
 
-
+	sf::Vector2f vel = getVelocity();
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
 		direction.x = -1;
 	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
@@ -17,8 +17,9 @@ void Player::update(double delta) {
 		//direction.y = -1;
 	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
 		direction.x=0;
+		//vel.x *= .5;
 	}
-	sf::Vector2f vel = getVelocity();
+	
 	vel.x = speed.x * direction.x * delta;
 	vel.y = speed.y * direction.y * delta;
 	setVelocity(vel);
@@ -26,7 +27,7 @@ void Player::update(double delta) {
 }
 const sf::Vector2i Player::getType()const {
 	return this->texture_strct.PLAYER;
-}}
+}
  Player* Player::clone()const {
 	 return new Player(this);
 }
