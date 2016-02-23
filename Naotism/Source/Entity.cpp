@@ -3,6 +3,10 @@ Entity::Entity(float x , float y , sf::Vector2f velocity) :sf::Sprite() {
 	setPosition(x , y);
 	setVelocity(velocity);
 }
+Entity::Entity(const Entity* /*&*/ other):sf::Sprite() {
+	setPosition(other->getPosition());
+	setVelocity(other->getVelocity());
+}
 Entity::~Entity() {
 	delete txture_ptr;
 }

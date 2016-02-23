@@ -12,6 +12,8 @@ public:
 
 	virtual void init();
 	virtual void update(double delta);
+	// Current implementation does not clone texture
+	virtual Entity* Entity::clone()const = 0;
 protected:
 	const virtual sf::Vector2i Entity::getType()const;
 

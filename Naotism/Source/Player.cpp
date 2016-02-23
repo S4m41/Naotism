@@ -1,6 +1,9 @@
 #include "Player.h"
 Player::Player(float x , float y , sf::Vector2f velocity , int mass) : Collidable(x , y , velocity , mass) {
 }
+Player::Player(const Player* /*&*/other) : Collidable(other){
+	this->score = other->score;
+}
 void Player::update(double delta) {
 	score += (int) ( delta += 0.5 );
 
@@ -23,4 +26,10 @@ void Player::update(double delta) {
 }
 const sf::Vector2i Player::getType()const {
 	return this->texture_strct.PLAYER;
+}}
+ Player* Player::clone()const {
+	 return new Player(this);
 }
+ void Player::collide(const Collidable*& other)const {
+	 throw - 2;
+ }

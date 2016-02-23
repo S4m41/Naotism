@@ -1,9 +1,10 @@
 #include "Enemy.h"
 Enemy::Enemy(int type , float x , float y , sf::Vector2f velocity , int mass) : Collidable(x , y , velocity , mass) , type(type){}
-
+Enemy::Enemy(const Enemy* /*&*/ other): Collidable(other) {
+	type = other->type;
+}
 void Enemy::update(double delta) {
 	Collidable::update(delta);
-	//screenwrap logic here
 }
 const sf::Vector2i Enemy::getType()const {
 	switch(type) {
@@ -18,4 +19,11 @@ const sf::Vector2i Enemy::getType()const {
 	default:
 		return Entity::getType();
 	}
+}
+Enemy* Enemy::clone()const {
+	return new Enemy(this);
+}
+void Enemy::collide(const Collidable*& other)const {
+
+	throw - 2;
 }
