@@ -7,5 +7,7 @@ public:
 protected:
 	const virtual sf::Vector2i Player::getType()const;
 private:
-	int score;
+	sf::Vector2i direction = sf::Vector2i(0,0);
+	sf::Vector2f speed = sf::Vector2f(2 , 0.01f);
+	int score=0;
 };

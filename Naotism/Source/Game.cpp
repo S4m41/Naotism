@@ -13,7 +13,7 @@ Game::~Game() {
 void Game::init() {
 
 	//Entity* ent_ptr = new Enemy(1);
-	Entity* ent_ptr = new Player(1);
+	Entity* ent_ptr = new Player(1520/2 , 800-64);
 	try {
 		ent_ptr->init();
 	} catch(int i) {
@@ -22,7 +22,6 @@ void Game::init() {
 		}
 		error = error | Errors::Read;
 	}
-	
 	
 	this->entitylist.push_back(ent_ptr);
 }

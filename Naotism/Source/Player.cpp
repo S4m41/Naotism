@@ -1,18 +1,23 @@
 #include "Player.h"
-Player::Player(float x , float y , sf::Vector2f velocity , int mass) : Collidable(x , y , velocity , mass), score(0) {}
+Player::Player(float x , float y , sf::Vector2f velocity , int mass) : Collidable(x , y , velocity , mass) {
+}
 void Player::update(double delta) {
 	score += (int) ( delta += 0.5 );
-	sf::Vector2f vel = getVelocity();
+
+
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-		vel.x -= ( 1 * delta );
+		direction.x = -1;
 	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-		vel.x += ( 1 * delta );
+		direction.x = 1;
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-		vel.y -= ( 1 * delta );
+		//direction.y = -1;
 	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-		vel.y += ( 1 * delta );
+		direction.x=0;
 	}
+	sf::Vector2f vel = getVelocity();
+	vel.x = speed.x * direction.x * delta;
+	vel.y = speed.y * direction.y * delta;
 	setVelocity(vel);
 	Collidable::update(delta);
 }

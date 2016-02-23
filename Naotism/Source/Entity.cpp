@@ -16,8 +16,6 @@ void Entity::setVelocity(float x , float y) {
 	setVelocity(sf::Vector2f(x , y));
 }
 void Entity::init() {
-	this->setPosition(50 , 50);
-
 
 	sf::Texture* texture = new sf::Texture();
 	sf::Image image;

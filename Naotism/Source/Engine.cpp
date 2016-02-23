@@ -18,6 +18,7 @@ void Engine::init(Game* currGame) {
 	fps = 0;
 	window.create(sf::VideoMode(screensize.x , screensize.y) , "Naotism" , sf::Style::Titlebar | sf::Style::Close);
 	currGame->init();
+
 	//currGame->problem(Errors::Close);
 	this->myGame = currGame;
 
@@ -67,7 +68,7 @@ void Engine::main_loop() {
 		sf::Sprite sprite(texture);
 		window.draw(sprite);
 		window.display();
-		//wait(( lastLoopTime - klock() + OPTIMAL_TIME )*( RES / 10e3 ));
+		wait(( lastLoopTime - klock() + OPTIMAL_TIME )*( RES / 10e3 ));
 
 	}
 	if(!myGame->isRunning()) {
