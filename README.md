@@ -21,7 +21,7 @@
 
 ## >Log< ##
 
-9-24 textures collisions
+9-24 textures collisions| end of session  11-52
 ## >Log!< ##
 
 ## >Descr<##
