@@ -38,3 +38,6 @@ void Entity::update(double delta) {
 const sf::Vector2i Entity::getType()const {
 	return this->texture_strct.PLACEHOLDER;
 }
+const bool Entity::isDead() const{
+	return remove_me;
+}

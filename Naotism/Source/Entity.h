@@ -15,7 +15,9 @@ public:
 	virtual void update(double delta);
 	// Current implementation does not clone texture
 	virtual Entity* Entity::clone()const = 0;
+	const bool isDead()const;
 protected:
+	bool remove_me=false;
 	const virtual sf::Vector2i Entity::getType()const;
 
 	typedef  const struct __t {
@@ -40,4 +42,7 @@ private:
 	sf::Texture* txture_ptr;
 
 
+	
+public:
+	
 };

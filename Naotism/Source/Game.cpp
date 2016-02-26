@@ -13,6 +13,7 @@ Game::~Game() {
 void Game::init() {
 
 	//Entity* ent_ptr = new Enemy(1);
+
 	Entity* ent_ptr = new Player(SCREENSIZES::LARGE.x / 2 , SCREENSIZES::LARGE.y - 64);
 	try {
 		ent_ptr->init();

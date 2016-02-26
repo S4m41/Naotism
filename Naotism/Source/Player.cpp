@@ -31,6 +31,6 @@ const sf::Vector2i Player::getType()const {
  Player* Player::clone()const {
 	 return new Player(this);
 }
- void Player::collide(const Collidable*& other)const {
+ void Player::collide(const Collidable*& other) {
 	 throw - 2;
  }
