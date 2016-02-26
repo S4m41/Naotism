@@ -14,7 +14,7 @@ void Game::init() {
 
 	//Entity* ent_ptr = new Enemy(1);
 
-	Entity* ent_ptr = new Player(SCREENSIZES::LARGE.x / 2 , SCREENSIZES::LARGE.y - 64);
+	Entity* ent_ptr = new Player();
 	try {
 		ent_ptr->init();
 	} catch(int i) {
@@ -28,6 +28,7 @@ void Game::init() {
 }
 //################################################
 void Game::update(double delta) {
+	score += 1 + (int) ( 1 / delta + 0.5 );
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 		problem(Close);
 	}

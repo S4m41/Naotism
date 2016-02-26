@@ -39,13 +39,13 @@ Enemy* Enemy::clone()const {
 	return new Enemy(this);
 }
 void Enemy::collide(const Collidable*& other) {
-	sf::Vector2f vel = getVelocity();
+	/*sf::Vector2f vel = getVelocity();
 	float x = ( vel.x* ( getMass() - other->getMass() ) + 2 * other->getMass()*other->getVelocity().x )
 		/ ( getMass() + other->getMass() );
 	float y = ( vel.y* ( getMass() - other->getMass() ) + 2 * other->getMass()*other->getVelocity().y )
 		/ ( getMass() + other->getMass() );
 
-	setVelocity(x , y);
+	setVelocity(x , y);*/
 }
 const sf::Vector2f Enemy::getVelocityOfType(int type)const {
 	switch(type) {
