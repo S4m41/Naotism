@@ -819,6 +819,18 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="df8c592c-2d98-4a50-8958-b51e74d952d3"
+            name="score"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1226,6 +1238,17 @@
             Id="8cc96ceb-0c2d-44cb-9db2-40f185323e1b"
             name="texture_ptr"
             visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="af6daa60-2b35-4593-91c7-cf5f841ec463"
+            name="removeMe"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1834,78 +1857,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <ownedAttributesInternal>
-          <property
-            Id="c0548adc-2d4f-4632-bc09-756d2359f97b"
-            name="score"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="43d428b1-6b0e-49cb-aa02-c1f9b035f815"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c1a6b0ee-6d13-4529-879e-1de583f36570">
-                    <propertyInstance
-                      Id="654409a2-ee97-4954-95c8-e71c93c69dbe"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ed422ee6-83d7-45a5-84b8-5fd229944c2e">
-                    <propertyInstance
-                      Id="3b8b8c8d-ac6f-4b93-bba2-43acbdc3bdd5"
-                      name="Get"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7ec6eb08-2a9e-47c6-ba5d-cf303a016a1a">
-                    <propertyInstance
-                      Id="92a2acc6-7927-4ddf-98fa-f5d5bba3bd82"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="fda433ff-a780-4cda-bab6-24f2b078ee5a">
-                    <propertyInstance
-                      Id="0ae5aa00-1761-4051-85fc-e4067b589ba2"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="43b8134c-646f-4e57-a761-45041d9cf78c">
-                    <propertyInstance
-                      Id="97de7618-8143-459b-970a-d6e3d22e6240"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a07927c2-c390-4c4d-8d7f-54d4e3db4033">
-                    <propertyInstance
-                      Id="f16dfe89-4923-46c2-807e-610df59cfe9d"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9bd1af72-cd23-4b26-80ca-9d035ff03186">
-                    <propertyInstance
-                      Id="dea148a8-7701-4c10-b2a6-578463645269"
-                      name="Set"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-          </property>
-        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="589d7e12-dc05-47e4-bfb0-51ac8746911c"

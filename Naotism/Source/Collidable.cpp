@@ -6,7 +6,7 @@ Collidable::Collidable(float x , float y , sf::Vector2f velocity , int mass) :En
 Collidable::Collidable(const Collidable* /*&*/other) :Entity(other) {
 	setMass(other->getMass());
 }
-bool Collidable::isColliding(const Collidable*& other) const{
+bool Collidable::isColliding(const Collidable* other) const{
 	return getGlobalBounds().intersects(other->getGlobalBounds());
 }
 void Collidable::setMass(int mass) {
