@@ -38,4 +38,6 @@ private:
 	void clearDead();
 	void spawnNew();
 	void Game::handleCollisions() const;
+	sf::Font font;
+	sf::Text scoretxt;
 };

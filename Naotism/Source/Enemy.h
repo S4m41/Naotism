@@ -24,3 +24,4 @@ namespace ENEMY_TYPES{
 	};
 
 }
+//Eenmy::type.rock
