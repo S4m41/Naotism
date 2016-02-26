@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "Enemy.h"
 Player::Player(float x , float y , sf::Vector2f velocity , int mass) : Collidable(x , y , velocity , mass) {
 }
 Player::Player(const Player* /*&*/other) : Collidable(other) {
@@ -30,6 +31,11 @@ const sf::Vector2i Player::getType()const {
 Player* Player::clone()const {
 	return new Player(this);
 }
-void Player::collide(const Collidable*& other) {
-	remove_me = true;
+void Player::collide( Collidable*& other) {
+	Entity* ent = other->clone();
+	Enemy* enemy = dynamic_cast<Enemy*>( ent );
+	if(enemy) {
+		remove_me = true;
+	}
+	delete ent;
 }

@@ -36,6 +36,7 @@ void Game::update(double delta) {
 	for each ( Entity* var in entitylist ) {
 		var->update(delta);
 	}
+	handleCollisions();
 	spawnNew();
 	clearDead();
 	std::cout << "|";
@@ -103,4 +104,18 @@ int unsigned_to_signed(unsigned n) {
 		return static_cast<int>( n - INT_MIN ) + INT_MIN;
 
 	throw n; // Or whatever else you like
+}
+void Game:: handleCollisions() const{
+	for each ( Entity* var in entitylist ) {
+		Collidable* coll = dynamic_cast<Collidable*>( var );
+		if(coll) {
+			for each ( Entity* var1 in entitylist ) {
+				Collidable* coll1 = dynamic_cast<Collidable*>( var1 );
+				if(var1) {
+					if(coll->isColliding(coll1))
+						coll->collide(coll1);
+				}
+			}
+		}
+	}
 }

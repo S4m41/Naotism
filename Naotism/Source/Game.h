@@ -37,5 +37,5 @@ private:
 	int score = 0;
 	void clearDead();
 	void spawnNew();
-
+	void Game::handleCollisions() const;
 };

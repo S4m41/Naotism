@@ -13,7 +13,9 @@ void Enemy::update(double delta) {
 
 		setVelocity(getVelocity().x*-1 , 0);*/
 
-	if(this->getGlobalBounds().top < SCREENSIZES::LARGE.y)
+	int top = this->getGlobalBounds().top;
+	int screen_bottom = SCREENSIZES::LARGE.y;
+	if(top> screen_bottom)
 		remove_me = true;
 
 	Collidable::update(delta);
@@ -38,7 +40,7 @@ const sf::Vector2i Enemy::getType()const {
 Enemy* Enemy::clone()const {
 	return new Enemy(this);
 }
-void Enemy::collide(const Collidable*& other) {
+void Enemy::collide( Collidable*& other) {
 	/*sf::Vector2f vel = getVelocity();
 	float x = ( vel.x* ( getMass() - other->getMass() ) + 2 * other->getMass()*other->getVelocity().x )
 		/ ( getMass() + other->getMass() );
@@ -50,13 +52,13 @@ void Enemy::collide(const Collidable*& other) {
 const sf::Vector2f Enemy::getVelocityOfType(int type)const {
 	switch(type) {
 	case ENEMY_TYPES::ROCK:
-		return sf::Vector2f(10 , 10);//texture_strct.ROCK;
+		return sf::Vector2f(0 , 10);//texture_strct.ROCK;
 	case ENEMY_TYPES::TOWEL:
-		return sf::Vector2f(2 , 2);//texture_strct.TOWEL;
+		return sf::Vector2f(0 , 2);//texture_strct.TOWEL;
 	case ENEMY_TYPES::SPACESHIP:
-		return sf::Vector2f(20 , 20);//texture_strct.SPACESHIP;
+		return sf::Vector2f(0 , 20);//texture_strct.SPACESHIP;
 	case ENEMY_TYPES::A_BOMB:
-		return sf::Vector2f(25 , 25);//texture_strct.A_BOMB;
+		return sf::Vector2f(0 , 25);//texture_strct.A_BOMB;
 	default:
 		return sf::Vector2f(0 , 0);//Entity::getType();
 
