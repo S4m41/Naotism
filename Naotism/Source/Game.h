@@ -18,7 +18,7 @@ public:
 
 	void Game::init();
 
-	void Game::update(double delta);
+	void Game::update(float delta);
 
 
 	bool Game::isRunning()const;

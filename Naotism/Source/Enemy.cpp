@@ -5,7 +5,7 @@ Enemy::Enemy(int type , float x , float y , int mass) : Collidable(x , y , getVe
 Enemy::Enemy(const Enemy* /*&*/ other) : Collidable(other) {
 	type = other->type;
 }
-void Enemy::update(double delta) {
+void Enemy::update(float delta) {
 	sf::Vector2f vec = getVelocityOfType(type);
 	this->setVelocity(vec.x*delta , vec.y*delta);
 	/*if(this->getGlobalBounds().left < 0

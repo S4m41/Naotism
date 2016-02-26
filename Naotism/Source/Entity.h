@@ -12,7 +12,7 @@ public:
 	void Entity::setVelocity(float x , float y);
 
 	virtual void init();
-	virtual void update(double delta);
+	virtual void update(float delta);
 	// Current implementation does not clone texture
 	virtual Entity* Entity::clone()const = 0;
 	const bool isDead()const;

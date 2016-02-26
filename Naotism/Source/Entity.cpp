@@ -32,7 +32,7 @@ void Entity::init() {
 	this->setTexture(*texture);
 	txture_ptr = texture;
 }
-void Entity::update(double delta) {
+void Entity::update(float delta) {
 	move(velocity);
 }
 const sf::Vector2i Entity::getType()const {

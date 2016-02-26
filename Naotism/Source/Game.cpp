@@ -36,7 +36,7 @@ void Game::init() {
 	this->entitylist.push_back(ent_ptr);
 }
 //################################################
-void Game::update(double delta) {
+void Game::update(float delta) {
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 		problem(Close);
 	}

@@ -8,7 +8,7 @@ public:
 	virtual void Collidable::collide( Collidable*& other)= 0;
 	void Collidable::setMass(int mass);
 	int Collidable::getMass()const;
-	void Collidable::update(double delta);
+	void Collidable::update(float delta);
 private:
 	int mass;
 

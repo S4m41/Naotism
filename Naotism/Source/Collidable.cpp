@@ -15,7 +15,7 @@ void Collidable::setMass(int mass) {
 int Collidable::getMass()const {
 	return mass;
 }
-void Collidable::update(double delta) {
+void Collidable::update(float delta) {
 	if(this->getGlobalBounds().left + this->getGlobalBounds().width<0) {//TODO polish
 		this->move(SCREENSIZES::LARGE.x - this->getGlobalBounds().left , 0);
 	} else if(this->getGlobalBounds().left > SCREENSIZES::LARGE.x) {
