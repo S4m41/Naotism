@@ -31,9 +31,11 @@ public:
 protected:
 	std::vector<Entity*> entitylist;
 private:
-	int score = 0;
 	virtual void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const;
 	int error;
 	void scarySprite(sf::RenderTarget& canvas)const;//for testing
+	int score = 0;
+	void clearDead();
+	void spawnNew();
 
 };

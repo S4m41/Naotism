@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Engine.h"//noo don't
+int unsigned_to_signed(unsigned n) throw( ... );
 Game::Game() {
 	error = Errors::Fine;
 }
@@ -35,6 +36,8 @@ void Game::update(double delta) {
 	for each ( Entity* var in entitylist ) {
 		var->update(delta);
 	}
+	spawnNew();
+	clearDead();
 	std::cout << "|";
 }
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -56,4 +59,48 @@ int Game::getErrors() const {
 }
 void Game::operator =( const Game& otherGame ) {
 	this->error = otherGame.error;
+}
+void Game::spawnNew() {
+	if(rand() % score > 100) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::ROCK , rand() % SCREENSIZES::LARGE.x , 0);
+		ent_ptr->init();
+		entitylist.push_back(ent_ptr);
+	}
+	if(rand() % score > 1e7) {
+
+	}
+	if(rand() % score > 1e9) {
+
+	}
+}
+//DOUBT
+void Game::clearDead() {
+	std::vector<int> removelist_index;
+	for(int i = 0; i < unsigned_to_signed(entitylist.size()); i++) {//DOUBT
+		Entity* var = entitylist.at(i);
+		if(var->isDead()) {
+			Player* t1 = dynamic_cast<Player*>( var );
+			if(t1) {
+				//game over
+				std::cout << "GAME OVER" << std::endl;
+				getchar();//print to sfml not console
+				problem(Errors::Other);//clarify
+			}
+			removelist_index.push_back(i);
+		}
+	}
+	for(int i = 0; i < unsigned_to_signed(removelist_index.size()); i++) {//DOUBT
+		Entity* ent_ptr = entitylist.at(removelist_index.at(i));
+		entitylist.erase(entitylist.begin() + removelist_index.at(i));
+		delete ent_ptr;
+	}
+}
+int unsigned_to_signed(unsigned n) {
+	if(n <= INT_MAX)
+		return static_cast<int>( n );
+
+	if(n >= INT_MIN)
+		return static_cast<int>( n - INT_MIN ) + INT_MIN;
+
+	throw n; // Or whatever else you like
 }
