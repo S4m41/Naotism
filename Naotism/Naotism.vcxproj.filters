@@ -57,6 +57,9 @@
     <ClCompile Include="Source\Player.cpp">
       <Filter>Samai\Naotism\Source\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="frequencyTest.cpp">
+      <Filter>Samai</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Placeholder.png">

@@ -20,8 +20,19 @@
 ## >Dev!< ##
 
 ## >Log< ##
-
-9-24 textures collisions| end of session  11-52
+feb 12 ?h
+	making the textures wrk with a spritesheet in stead of multiple files. should the spritesheet be static?
+feb 16 ?h
+	implement constructor chaining with cpy constructor and defaulted constructors
+		collidable should ABSOLUTLEY NOT be private
+feb 19
+	fixed merge of classdiagram.. should have done this earlier
+feb 23 
+	fixed icephysics for player. player now moves at a constant speed, could be a problem if collisions become fully implemented
+	added alpha channel for spritesheet
+	moved player to correct position. fixed movement in correct axis
+//tis 2.5h textures collisions
+//fre 3h
 ## >Log!< ##
 
 ## >Descr<##
