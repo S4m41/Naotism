@@ -2,7 +2,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Engine.h"//noo don't
-#define IMMORTAL 1
+#define IMMORTAL 0
 int unsigned_to_signed(unsigned n) throw( ... );
 Game::Game() {
 	error = Errors::Fine;
@@ -37,18 +37,28 @@ void Game::init() {
 }
 //################################################
 void Game::update(double delta) {
-	score += 1 + (int) ( 1 / delta + 0.5 );
-	scoretxt.setString(std::to_string(score));
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 		problem(Close);
 	}
-	for each ( Entity* var in entitylist ) {
-		var->update(delta);
+	if(!GAMEOVER.gameover) {
+		score += 1 + (int) ( 1 / delta + 0.5 );
+		scoretxt.setString(std::to_string(score));
+
+		for each ( Entity* var in entitylist ) {
+			var->update(delta);
+		}
+		handleCollisions();
+		spawnNew();
+		clearDead();
+		std::cout << "|";
+	} else {
+		scoretxt.setString("GAME OVER");
+		GAMEOVER.ttcooldown += 1;
+		if(GAMEOVER.ttcooldown > GAMEOVER.cooldown) {
+			GAMEOVER.ttcooldown = 0;
+			scoretxt.setColor(sf::Color(rand() % 256 , rand() % 256 , rand() % 256));
+		}
 	}
-	handleCollisions();
-	spawnNew();
-	clearDead();
-	std::cout << "|";
 }
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const {
@@ -74,24 +84,25 @@ void Game::operator =( const Game& otherGame ) {
 	this->error = otherGame.error;
 }
 void Game::spawnNew() {
-	if(rand() % 100 < 5) {
+	double d = bell(score , 500) , e = bell(score , 1000) , f = bell(score , 1500) , g = bell(score , 2000);
+	if(rand() % 100 < d) {
 
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , rand() % SCREENSIZES::LARGE.x , 0);
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , (float)(rand() % SCREENSIZES::LARGE.x) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
-	if(rand() % score > 200) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::ROCK , rand() % SCREENSIZES::LARGE.x , 0);
+	if(rand() % 100 < e) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::ROCK , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
-	if(rand() % score > 500) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::SPACESHIP , rand() % SCREENSIZES::LARGE.x , 0);
+	if(rand() % 100 < f) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::SPACESHIP , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
-	if(rand() % score > 1e3) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , rand() % SCREENSIZES::LARGE.x , 0);
+	if(rand() % 100 < g) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
@@ -107,11 +118,10 @@ void Game::clearDead() {
 				//game over
 #if !IMMORTAL
 				std::cout << "GAME OVER" << std::endl;
-				getchar();//print to sfml not console
-				problem(Errors::Other);//clarify
+				GAMEOVER.gameover = true;
 #endif
-			}
-			removelist_index.push_back(i);
+			} else
+				removelist_index.push_back(i);
 		}
 	}
 	for(int i = 0; i < unsigned_to_signed(removelist_index.size()); i++) {//DOUBT
@@ -129,7 +139,7 @@ int unsigned_to_signed(unsigned n) {
 
 	throw n; // Or whatever else you like
 }
-void Game:: handleCollisions() const{
+void Game::handleCollisions() const {
 	for each ( Entity* var in entitylist ) {
 		Collidable* coll = dynamic_cast<Collidable*>( var );
 		if(coll) {

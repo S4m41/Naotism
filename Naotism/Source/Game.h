@@ -31,13 +31,26 @@ public:
 protected:
 	std::vector<Entity*> entitylist;
 private:
-	virtual void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const;
 	int error;
-	void scarySprite(sf::RenderTarget& canvas)const;//for testing
 	int score = 0;
-	void clearDead();
-	void spawnNew();
-	void Game::handleCollisions() const;
 	sf::Font font;
 	sf::Text scoretxt;
+
+	typedef struct _go{
+		bool gameover = false;
+		const int cooldown = 2;
+		int ttcooldown;
+	}GOStat;
+	GOStat GAMEOVER;
+
+	virtual void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const;
+	void Game::clearDead();
+	void Game::spawnNew();
+	void Game::handleCollisions() const;
+
+	void Game::scarySprite(sf::RenderTarget& canvas)const;//for testing
+
+
+
+
 };

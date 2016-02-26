@@ -12,6 +12,6 @@ protected:
 	const virtual sf::Vector2i Player::getType()const;
 private:
 	sf::Vector2i direction = sf::Vector2i(0,0);
-	sf::Vector2f speed = sf::Vector2f(15 , 0.01f);
+	sf::Vector2f speed = sf::Vector2f(7 , 0.01f);
 	
 };
