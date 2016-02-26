@@ -43,7 +43,7 @@ void Engine::main_loop() {
 		ld now = klock();
 		ld updateLength = now - lastLoopTime;
 		lastLoopTime = now;
-		double delta = updateLength / ( (double) OPTIMAL_TIME );
+		float delta = updateLength / ( (double) OPTIMAL_TIME );
 
 		sf::Event event;
 		while(window.pollEvent(event)) {

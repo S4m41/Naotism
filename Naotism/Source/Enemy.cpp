@@ -13,7 +13,7 @@ void Enemy::update(float delta) {
 
 		setVelocity(getVelocity().x*-1 , 0);*/
 
-	int top = this->getGlobalBounds().top;
+	float top = this->getGlobalBounds().top;
 	int screen_bottom = SCREENSIZES::LARGE.y;
 	if(top> screen_bottom)
 		remove_me = true;
