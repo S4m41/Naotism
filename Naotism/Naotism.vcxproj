@@ -94,8 +94,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Nahrwals\Documents\Visual Studio 2013\Projects\Naotism\Naotism\External\SFML-2.3.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Nahrwals\Documents\Visual Studio 2013\Projects\Naotism\Naotism\External\SFML-2.3.2\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='freqtest|Win32'">
     <LinkIncremental>true</LinkIncremental>

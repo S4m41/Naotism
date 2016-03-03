@@ -26,7 +26,7 @@ public:
 	int Game::getErrors() const;
 	void operator =( const Game& otherGame );
 
-
+	void clear();
 
 protected:
 	std::vector<Entity*> entitylist;
