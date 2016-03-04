@@ -34,7 +34,7 @@ private:
 	void fpsCount(long double updatelength);
 
 	long double lastFpsTime;
-	int fps;
+	int fps;  sf::Clock clock;
 	const int TARGET_FPS = 64;//MAX 500
 
 	Game* myGame;
