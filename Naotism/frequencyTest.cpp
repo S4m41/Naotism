@@ -43,6 +43,7 @@ int main() {
 		wait(( lastLoopTime - klock() + OPTIMAL_TIME )*( RES / 10e3 ));
 	}
 }
+static double h = 0;
 void update(long double delta , int &tick) {
 	tick += 1;//+ (int) (delta + 0.5 );
 	const int dist = 2;
@@ -51,8 +52,9 @@ void update(long double delta , int &tick) {
 	double d = bell(tick , peak*pow(dist,i++));
 	double e = bell(tick , peak*pow(dist , i++));
 	double f = bell(tick , peak*pow(dist , i++)) , g = bell(tick , peak*pow(dist , i++));
+	h = ( g < h ) ? h : g;
 
-	//cout << i << endl;
+	cout << "!"<<h<<"!" << endl;
 	if(rand()%100 < d) {
 		cout << "1" << "\t";
 	}

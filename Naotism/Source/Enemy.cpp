@@ -5,7 +5,7 @@ Enemy::Enemy(int type , float x , float y , int mass) : Collidable(x , y , getVe
 Enemy::Enemy(const Enemy* /*&*/ other) : Collidable(other) {
 	type = other->type;
 }
-void Enemy::update(double delta) {
+void Enemy::update(float delta) {
 	sf::Vector2f vec = getVelocityOfType(type);
 	this->setVelocity(vec.x*delta , vec.y*delta);
 	/*if(this->getGlobalBounds().left < 0
@@ -13,7 +13,7 @@ void Enemy::update(double delta) {
 
 		setVelocity(getVelocity().x*-1 , 0);*/
 
-	int top = this->getGlobalBounds().top;
+	float top = this->getGlobalBounds().top;
 	int screen_bottom = SCREENSIZES::LARGE.y;
 	if(top> screen_bottom)
 		remove_me = true;

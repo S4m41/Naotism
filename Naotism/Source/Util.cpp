@@ -43,9 +43,8 @@ void Game::scarySprite(sf::RenderTarget& canvas) const {
 	canvas.draw(rectangle);
 }
 
-double bell(int tick , int i/*peak*/) {
-	const double c = pow(2 * 225 , 2);//bell width
-	const double b = 20;//max
-	return ( b * exp(-( pow(tick - i , 2) / c )) );
+double bell(int tick , int i/*peak*/, int max) {
+	const double c = pow(3 * 225 , 2);//bell width
+	return ( max * exp(-( pow(tick - i , 2) / c )) );
 
 }

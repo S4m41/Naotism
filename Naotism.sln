@@ -12,6 +12,9 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|Win32 = Debug|Win32
+		freqtest|Any CPU = freqtest|Any CPU
+		freqtest|Mixed Platforms = freqtest|Mixed Platforms
+		freqtest|Win32 = freqtest|Win32
 		Release|Any CPU = Release|Any CPU
 		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|Win32 = Release|Win32
@@ -20,8 +23,14 @@ Global
 		{0F795145-7C42-4921-AD01-289778690D40}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{0F795145-7C42-4921-AD01-289778690D40}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
 		{0F795145-7C42-4921-AD01-289778690D40}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{0F795145-7C42-4921-AD01-289778690D40}.Debug|Win32.ActiveCfg = Debug|Win32
-		{0F795145-7C42-4921-AD01-289778690D40}.Debug|Win32.Build.0 = Debug|Win32
+		{0F795145-7C42-4921-AD01-289778690D40}.Debug|Win32.ActiveCfg = freqtest|Win32
+		{0F795145-7C42-4921-AD01-289778690D40}.Debug|Win32.Build.0 = freqtest|Win32
+		{0F795145-7C42-4921-AD01-289778690D40}.freqtest|Any CPU.ActiveCfg = freqtest|ARM
+		{0F795145-7C42-4921-AD01-289778690D40}.freqtest|Any CPU.Build.0 = freqtest|ARM
+		{0F795145-7C42-4921-AD01-289778690D40}.freqtest|Mixed Platforms.ActiveCfg = freqtest|Win32
+		{0F795145-7C42-4921-AD01-289778690D40}.freqtest|Mixed Platforms.Build.0 = freqtest|Win32
+		{0F795145-7C42-4921-AD01-289778690D40}.freqtest|Win32.ActiveCfg = freqtest|Win32
+		{0F795145-7C42-4921-AD01-289778690D40}.freqtest|Win32.Build.0 = freqtest|Win32
 		{0F795145-7C42-4921-AD01-289778690D40}.Release|Any CPU.ActiveCfg = Release|Win32
 		{0F795145-7C42-4921-AD01-289778690D40}.Release|Mixed Platforms.ActiveCfg = Release|Win32
 		{0F795145-7C42-4921-AD01-289778690D40}.Release|Mixed Platforms.Build.0 = Release|Win32
@@ -32,6 +41,10 @@ Global
 		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.freqtest|Any CPU.ActiveCfg = freqtest|Any CPU
+		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.freqtest|Mixed Platforms.ActiveCfg = freqtest|Any CPU
+		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.freqtest|Mixed Platforms.Build.0 = freqtest|Any CPU
+		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.freqtest|Win32.ActiveCfg = freqtest|Any CPU
 		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C983876B-D154-4CDF-8A3B-DFED2DAEE6A2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU

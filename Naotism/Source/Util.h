@@ -5,4 +5,4 @@ void wait(long double delay);
 int checkSpeed();
 long double klock();
 int cls();
-double bell(int tick , int i);
+double bell(int tick , int i,int max = 5);

@@ -18,7 +18,7 @@ public:
 
 	void Game::init();
 
-	void Game::update(double delta);
+	void Game::update(float delta);
 
 
 	bool Game::isRunning()const;
@@ -26,7 +26,7 @@ public:
 	int Game::getErrors() const;
 	void operator =( const Game& otherGame );
 
-
+	void clear();
 
 protected:
 	std::vector<Entity*> entitylist;

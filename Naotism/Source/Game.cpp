@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Player.h"
 #include "Enemy.h"
+#include <string>
 #include "Engine.h"//noo don't
 #define IMMORTAL 0
 int unsigned_to_signed(unsigned n) throw( ... );
@@ -36,7 +37,7 @@ void Game::init() {
 	this->entitylist.push_back(ent_ptr);
 }
 //################################################
-void Game::update(double delta) {
+void Game::update(float delta) {
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 		problem(Close);
 	}
@@ -52,11 +53,20 @@ void Game::update(double delta) {
 		clearDead();
 		std::cout << "|";
 	} else {
-		scoretxt.setString("GAME OVER");
+		std::string s = ( " you scored :" + std::to_string(score) );
+		s +="\nGAME OVER! Press n to start anew";
+		scoretxt.setString(s);
 		GAMEOVER.ttcooldown += 1;
 		if(GAMEOVER.ttcooldown > GAMEOVER.cooldown) {
 			GAMEOVER.ttcooldown = 0;
 			scoretxt.setColor(sf::Color(rand() % 256 , rand() % 256 , rand() % 256));
+		}
+
+		if(sf::Keyboard::isKeyPressed(sf::Keyboard::N)) {
+			score = 0;
+			GAMEOVER.gameover = false;
+			clear();
+			init();
 		}
 	}
 }
@@ -84,7 +94,7 @@ void Game::operator =( const Game& otherGame ) {
 	this->error = otherGame.error;
 }
 void Game::spawnNew() {
-	double d = bell(score , 500) , e = bell(score , 1000) , f = bell(score , 1500) , g = bell(score , 2000);
+	double d = bell(score , 500) , e = bell(score , 1500) , f = bell(score , 2500) , g = bell(score , 3500);
 	if(rand() % 100 < d) {
 
 		Entity* ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , (float)(rand() % SCREENSIZES::LARGE.x) , 0);
@@ -106,6 +116,11 @@ void Game::spawnNew() {
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
+	if(score > 3500 && rand() % 100 < 50) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+		ent_ptr->init();
+		entitylist.push_back(ent_ptr);
+	}
 }
 //DOUBT
 void Game::clearDead() {
@@ -121,6 +136,7 @@ void Game::clearDead() {
 				GAMEOVER.gameover = true;
 #endif
 			} else
+				std::cout << "@Entity removed@";
 				removelist_index.push_back(i);
 		}
 	}
@@ -152,4 +168,10 @@ void Game::handleCollisions() const {
 			}
 		}
 	}
+}
+void Game::clear() {
+	for each ( Entity* var in entitylist ) {
+		delete var;
+	}
+	entitylist.clear();
 }

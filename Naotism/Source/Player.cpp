@@ -4,7 +4,7 @@ Player::Player(float x , float y , sf::Vector2f velocity , int mass) : Collidabl
 }
 Player::Player(const Player* /*&*/other) : Collidable(other) {
 }
-void Player::update(double delta) {
+void Player::update(float delta) {
 
 
 	sf::Vector2f vel = getVelocity();
