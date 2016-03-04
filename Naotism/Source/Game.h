@@ -14,7 +14,7 @@ class Game : public sf::Drawable
 {
 public:
 	Game();
-	~Game();
+	virtual ~Game();
 
 	void Game::init();
 

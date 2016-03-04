@@ -83,9 +83,10 @@ void Engine::fpsCount(long double updateLength) {
 
 	lastFpsTime += updateLength;
 	fps++;
+	int s = clock.restart().asSeconds();
 	if(lastFpsTime >= RES) {
-		cout << "(FPS: " << fps << ")" << endl;
 		
+		cout << "(FPS: " << std::to_string(1.f/s) << ")" << endl;
 
 		lastFpsTime = 0;
 		fps = 0;

@@ -153,7 +153,7 @@ int unsigned_to_signed(unsigned n) {
 	if(n >= INT_MIN)
 		return static_cast<int>( n - INT_MIN ) + INT_MIN;
 
-	throw n; // Or whatever else you like
+	throw - 3;
 }
 void Game::handleCollisions() const {
 	for each ( Entity* var in entitylist ) {
