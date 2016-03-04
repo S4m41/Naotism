@@ -11,26 +11,47 @@
 #######################################################################
 
 ## >Dev< ##
--remove first int arg in player
 -Clone() clone texture
 -Performance issues dropping to 15 fps at fullscreen
--implement collisions
--implement distractions
--create constructors
+-implement distractions//delayed
 ## >Dev!< ##
 
 ## >Log< ##
-feb 12 ?h
-	making the textures wrk with a spritesheet in stead of multiple files. should the spritesheet be static?
-feb 16 ?h
-	implement constructor chaining with cpy constructor and defaulted constructors
+feb 12 
+	making the textures wrk with a spritesheet in stead of multiple files. 
+	should the spritesheet be static? 6h
+feb 15
+	started constructor chain. 
+	all children of entity call it's parents constructor until the constructor for entity is called.
+	spritesheet loaded and its handler implemented. getFilepath removed(obsolete).
+	why in not enemy working???? 5h
+	
+feb 16
+	implement constructor chaining with cpy constructor and defaulted constructors. 6h
+	problem with enemy solved
 		collidable should ABSOLUTLEY NOT be private
 feb 19
-	fixed merge of classdiagram.. should have done this earlier
+	fixed merge of classdiagram.. should have done this earlier. 1h
 feb 23 
-	fixed icephysics for player. player now moves at a constant speed, could be a problem if collisions become fully implemented
+	fixed icephysics for player. player now moves at a constant speed, 
+	could be a problem if collisions become fully implemented
 	added alpha channel for spritesheet
-	moved player to correct position. fixed movement in correct axis
+	moved player to correct position. fixed movement in correct axis. 6h
+feb 26
+	implemented collisions (questioning why i have collidable while distraction is not implemented) 3h
+	
+	spawns too frequent implementing bellcurve to alleviate this.
+	still not balanced but better.
+	starting frequency testing, somewhat balanced.
+	freqtest not representative approximation of reality, improve? skip?
+	annoyed by compiler complaining about conversion from float to double,
+	changed the argtype of update to float
+	end of session 4h
+	
+mar 3
+	added restartbutton, along with clear(). only highscore and balance lacking(have time?).
+	changed bell() to include wifth of curve as an aditonal arg. 2h
+	
 //tis 2.5h textures collisions
 //fre 3h
 ## >Log!< ##
