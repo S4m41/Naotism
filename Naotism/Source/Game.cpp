@@ -42,19 +42,19 @@ void Game::update(float delta) {
 		problem(Close);
 	}
 	if(!GAMEOVER.gameover) {
-		score += 1 + (int) ( 1 / delta + 0.5 );
+		score += 1 + (int) (1+ delta + 0.5 );
 		scoretxt.setString(std::to_string(score));
 
 		for each ( Entity* var in entitylist ) {
 			var->update(delta);
 		}
 		handleCollisions();
-		spawnNew();
+		spawnNew(delta);
 		clearDead();
-		std::cout << "|";
+		//std::cout << "|";
 	} else {
 		std::string s = ( " you scored :" + std::to_string(score) );
-		s +="\nGAME OVER! Press n to start anew";
+		s += "\nGAME OVER! Press n to start anew";
 		scoretxt.setString(s);
 		GAMEOVER.ttcooldown += 1;
 		if(GAMEOVER.ttcooldown > GAMEOVER.cooldown) {
@@ -93,31 +93,31 @@ int Game::getErrors() const {
 void Game::operator =( const Game& otherGame ) {
 	this->error = otherGame.error;
 }
-void Game::spawnNew() {
+void Game::spawnNew(float delta) {
 	double d = bell(score , 500) , e = bell(score , 1500) , f = bell(score , 2500) , g = bell(score , 3500);
-	if(rand() % 100 < d) {
+	if(rand() % 100 < d*delta) {
 
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , (float)(rand() % SCREENSIZES::LARGE.x) , 0);
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
-	if(rand() % 100 < e) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::ROCK , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+	if(rand() % 100 < e *delta) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::ROCK , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
-	if(rand() % 100 < f) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::SPACESHIP , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+	if(rand() % 100 < f *delta) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::SPACESHIP , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
-	if(rand() % 100 < g) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+	if(rand() % 100 < g *delta) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
-	if(score > 3500 && rand() % 100 < 50) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+	if(score > 3500 && rand() % 100 < 50 * delta) {
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
@@ -136,8 +136,8 @@ void Game::clearDead() {
 				GAMEOVER.gameover = true;
 #endif
 			} else
-				std::cout << "@Entity removed@";
-				removelist_index.push_back(i);
+				std::cout << "@Entity removed@" << std::endl;
+			removelist_index.push_back(i);
 		}
 	}
 	for(int i = 0; i < unsigned_to_signed(removelist_index.size()); i++) {//DOUBT
@@ -153,7 +153,7 @@ int unsigned_to_signed(unsigned n) {
 	if(n >= INT_MIN)
 		return static_cast<int>( n - INT_MIN ) + INT_MIN;
 
-	throw n; // Or whatever else you like
+	throw - 3;
 }
 void Game::handleCollisions() const {
 	for each ( Entity* var in entitylist ) {

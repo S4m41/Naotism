@@ -6,6 +6,7 @@
 #######################################################################
 ######################## ERROR CODES ##################################
 -2 unimlemented
+-3 unsigned to signed conversion failed
 -11 failure to create rendertexture(doublebuffering)
 -12 failure to load image
 #######################################################################
@@ -14,6 +15,10 @@
 -Clone() clone texture
 -Performance issues dropping to 15 fps at fullscreen
 -implement distractions//delayed
+
+- enemy dissapearing cant find reason
+- sometimes vector is out of bounds
+- screensize_bad in engine is REEALY bad how can i replace the same function???
 ## >Dev!< ##
 
 ## >Log< ##
@@ -38,7 +43,7 @@ feb 23
 	added alpha channel for spritesheet
 	moved player to correct position. fixed movement in correct axis. 6h
 feb 26
-	implemented collisions (questioning why i have collidable while distraction is not implemented) 3h
+	implemented collisions (questioning why i have collidable while distraction is not implemented) 2.5h
 	
 	spawns too frequent implementing bellcurve to alleviate this.
 	still not balanced but better.
@@ -51,9 +56,6 @@ feb 26
 mar 3
 	added restartbutton, along with clear(). only highscore and balance lacking(have time?).
 	changed bell() to include wifth of curve as an aditonal arg. 2h
-	
-//tis 2.5h textures collisions
-//fre 3h
 ## >Log!< ##
 
 ## >Descr<##

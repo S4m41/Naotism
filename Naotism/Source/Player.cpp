@@ -26,7 +26,7 @@ void Player::update(float delta) {
 	Collidable::update(delta);
 }
 const sf::Vector2i Player::getType()const {
-	return this->texture_strct.PLAYER;
+	return Textures::PLAYER;
 }
 Player* Player::clone()const {
 	return new Player(this);

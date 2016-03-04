@@ -17,8 +17,8 @@ int Collidable::getMass()const {
 }
 void Collidable::update(float delta) {
 	if(this->getGlobalBounds().left + this->getGlobalBounds().width<0) {//TODO polish
-		this->move(SCREENSIZES::LARGE.x - this->getGlobalBounds().left , 0);
-	} else if(this->getGlobalBounds().left > SCREENSIZES::LARGE.x) {
+		this->move(SCREENSIZES::screensize_bad.x - this->getGlobalBounds().left , 0);
+	} else if(this->getGlobalBounds().left > SCREENSIZES::screensize_bad.x) {
 		this->move(-( this->getGlobalBounds().left + this->getGlobalBounds().width/2 ) , 0);
 	}
 	Entity::update(delta);

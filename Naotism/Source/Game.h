@@ -14,7 +14,7 @@ class Game : public sf::Drawable
 {
 public:
 	Game();
-	~Game();
+	virtual ~Game();
 
 	void Game::init();
 
@@ -45,7 +45,7 @@ private:
 
 	virtual void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const;
 	void Game::clearDead();
-	void Game::spawnNew();
+	void Game::spawnNew(float delta);
 	void Game::handleCollisions() const;
 
 	void Game::scarySprite(sf::RenderTarget& canvas)const;//for testing

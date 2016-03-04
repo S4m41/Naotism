@@ -1,6 +1,6 @@
 #include "Engine.h"
 
-#define RES (10e3)
+#define RES (10e2)
 using namespace std;
 
 Engine::Engine() {
@@ -26,23 +26,22 @@ void Engine::init(Game* currGame) {
 
 }
 void Engine::main_loop() {
-
-	typedef long double ld;
-	ld lastLoopTime = klock();
-	const ld OPTIMAL_TIME = RES / this->TARGET_FPS;
-	bool gameRunning = true;
 	sf::RenderTexture renderTexture;
 	if(!renderTexture.create(SCREENSIZES::FULLSCREEN.x , SCREENSIZES::FULLSCREEN.y)) {
-		gameRunning = false;
+		myGame->problem(Errors::Other);
 		std::cout << "Failed to create doublebuffer" << std::endl;
 		throw - 11;
 		// error...
 	}
+
+	typedef long double ld;
+	clock.restart();
+	const ld OPTIMAL_TIME = RES / this->TARGET_FPS;
+	
+
 	//main loop
 	while(this->myGame->isRunning() && window.isOpen()) {
-		ld now = klock();
-		ld updateLength = now - lastLoopTime;
-		lastLoopTime = now;
+		sf::Int32 updateLength = clock.restart().asMilliseconds();
 		float delta = updateLength / ( (double) OPTIMAL_TIME );
 
 		sf::Event event;
@@ -51,9 +50,8 @@ void Engine::main_loop() {
 				window.close();
 		}
 
-		//fpscounter
-		fpsCount(updateLength);
-
+		
+		
 
 		// update the game logic
 		myGame->update(delta);
@@ -70,20 +68,35 @@ void Engine::main_loop() {
 		sf::Sprite sprite(texture);
 		window.draw(sprite);
 		window.display();
-		wait(( lastLoopTime - klock() + OPTIMAL_TIME )*( RES / 10e3 ));
+		//fpscounter
+		//fpsCount(updateLength);
+		lastFpsTime += updateLength;
+		float Framerate = 1.f / clock.getElapsedTime().asMilliseconds();
+		if(lastFpsTime >= RES) {
+
+			cout << "(FPS: " << std::to_string(1.f / Framerate) << ")" << endl;
+
+			lastFpsTime = 0;
+			fps = 0;
+
+		}
 
 	}
 	if(!myGame->isRunning()) {
 		std::cout << myGame->getErrors() << std::endl;
 	}
 
+
 }
 void Engine::fpsCount(long double updateLength) {
+	
 
 	lastFpsTime += updateLength;
 	fps++;
+	int s = clock.restart().asSeconds();
 	if(lastFpsTime >= RES) {
-		cout << "(FPS: " << fps << ")" << endl;
+		
+		cout << "(FPS: " << std::to_string(1.f/s) << ")" << endl;
 
 		lastFpsTime = 0;
 		fps = 0;
