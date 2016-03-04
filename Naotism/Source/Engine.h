@@ -44,7 +44,8 @@ private:
 	sf::Vector2i screensize = SCREENSIZES::screensize_bad;
 	
 };
-/*enum sf::vector2i screensizes{
+/*
+enum sf::vector2i screensizes{
 	FULLSCREEN = sf::Vector2i(1900 , 1000);
 	LARGE = sf::Vector2i(1520 , 800);
 	MEDIUM = sf::Vector2i(950 , 500);

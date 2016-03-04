@@ -42,7 +42,7 @@ void Game::update(float delta) {
 		problem(Close);
 	}
 	if(!GAMEOVER.gameover) {
-		score += 1 + (int) ( 1 / delta + 0.5 );
+		score += 1 + (int) (1+ delta + 0.5 );
 		scoretxt.setString(std::to_string(score));
 
 		for each ( Entity* var in entitylist ) {
