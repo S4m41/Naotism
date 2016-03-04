@@ -97,27 +97,27 @@ void Game::spawnNew() {
 	double d = bell(score , 500) , e = bell(score , 1500) , f = bell(score , 2500) , g = bell(score , 3500);
 	if(rand() % 100 < d) {
 
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , (float)(rand() % SCREENSIZES::LARGE.x) , 0);
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
 	if(rand() % 100 < e) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::ROCK , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::ROCK , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
 	if(rand() % 100 < f) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::SPACESHIP , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::SPACESHIP , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
 	if(rand() % 100 < g) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
 	if(score > 3500 && rand() % 100 < 50) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::LARGE.x ) , 0);
+		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}

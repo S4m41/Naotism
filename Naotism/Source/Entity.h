@@ -33,7 +33,7 @@ public:
 	virtual Entity* Entity::clone()const = 0;
 	const bool isDead()const;
 protected:
-	bool remove_me=false;
+	bool remove_me = false;
 	const virtual sf::Vector2i Entity::getType()const;
 private:
 	sf::Vector2f velocity = sf::Vector2f(0 , 0);
