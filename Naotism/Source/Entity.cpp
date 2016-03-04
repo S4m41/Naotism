@@ -27,7 +27,7 @@ void Entity::init() {
 
 	if(!image.loadFromFile("Resources\\spritesheet.png"))throw - 12;
 	sf::Vector2i typerect = getType();
-	( *texture ).loadFromImage(image , sf::IntRect(texture_strct.spritesize.x*typerect.x , texture_strct.spritesize.y*typerect.y , texture_strct.spritesize.x , texture_strct.spritesize.y));
+	( *texture ).loadFromImage(image , sf::IntRect(Textures::spritesize.x*typerect.x , Textures::spritesize.y*typerect.y , Textures::spritesize.x , Textures::spritesize.y));
 
 	this->setTexture(*texture);
 	txture_ptr = texture;
@@ -36,7 +36,7 @@ void Entity::update(float delta) {
 	move(velocity);
 }
 const sf::Vector2i Entity::getType()const {
-	return this->texture_strct.PLACEHOLDER;
+	return Textures::PLACEHOLDER;
 }
 const bool Entity::isDead() const{
 	return remove_me;

@@ -23,16 +23,16 @@ void Enemy::update(float delta) {
 const sf::Vector2i Enemy::getType()const {
 	switch(type) {
 	case ENEMY_TYPES::ROCK:
-		return texture_strct.ROCK;
+		return Textures::ROCK;
 
 	case ENEMY_TYPES::TOWEL:
 		return texture_strct.TOWEL;
 
 	case ENEMY_TYPES::SPACESHIP:
-		return texture_strct.SPACESHIP;
+		return Textures::SPACESHIP;
 
 	case ENEMY_TYPES::A_BOMB:
-		return texture_strct.A_BOMB;
+		return Textures::A_BOMB;
 	default:
 		return Entity::getType();
 	}
@@ -52,13 +52,13 @@ void Enemy::collide( Collidable*& other) {
 const sf::Vector2f Enemy::getVelocityOfType(int type)const {
 	switch(type) {
 	case ENEMY_TYPES::TOWEL:
-		return sf::Vector2f(0 , 2);//texture_strct.TOWEL;
+		return sf::Vector2f(0 , 2);//Textures::TOWEL;
 	case ENEMY_TYPES::ROCK:
-		return sf::Vector2f(0 , 4);//texture_strct.ROCK;
+		return sf::Vector2f(0 , 4);//Textures::ROCK;
 	case ENEMY_TYPES::SPACESHIP:
-		return sf::Vector2f(0 , 8);//texture_strct.SPACESHIP;
+		return sf::Vector2f(0 , 8);//Textures::SPACESHIP;
 	case ENEMY_TYPES::A_BOMB:
-		return sf::Vector2f(0 , 12);//texture_strct.A_BOMB;
+		return sf::Vector2f(0 , 12);//Textures::A_BOMB;
 	default:
 		return sf::Vector2f(0 , 15);//Entity::getType();
 
