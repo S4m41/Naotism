@@ -9,9 +9,7 @@ Game::Game() {
 	error = Errors::Fine;
 }
 Game::~Game() {
-	for each ( Entity* var in entitylist ) {
-		delete var;
-	}
+	entitylist.clear();
 }
 void Game::init() {
 
@@ -45,7 +43,8 @@ void Game::update(float delta) {
 		score += 1 + (int) (1+ delta + 0.5 );
 		scoretxt.setString(std::to_string(score));
 
-		for each ( Entity* var in entitylist ) {
+		for ( int i = 0; i < entitylist.size();i++ ) {
+			Entity* var =entitylist.at(i);
 			var->update(delta);
 		}
 		handleCollisions();
@@ -72,7 +71,8 @@ void Game::update(float delta) {
 }
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const {
-	for each ( Entity* var in entitylist ) {
+	for(int i = 0; i < entitylist.size(); i++) {
+		Entity* var = entitylist.at(i);
 		canvas.draw(*var);
 	}
 	canvas.draw(scoretxt);
@@ -125,7 +125,7 @@ void Game::spawnNew(float delta) {
 //DOUBT
 void Game::clearDead() {
 	std::vector<int> removelist_index;
-	for(int i = 0; i < unsigned_to_signed(entitylist.size()); i++) {//DOUBT
+	for(int i = 0; i < entitylist.size(); i++) {//DOUBT
 		Entity* var = entitylist.at(i);
 		if(var->isDead()) {
 			Player* t1 = dynamic_cast<Player*>( var );
@@ -140,10 +140,9 @@ void Game::clearDead() {
 			removelist_index.push_back(i);
 		}
 	}
-	for(int i = 0; i < unsigned_to_signed(removelist_index.size()); i++) {//DOUBT
+	for(int i = 0; i <removelist_index.size(); i++) {//DOUBT
 		Entity* ent_ptr = entitylist.at(removelist_index.at(i));
-		entitylist.erase(entitylist.begin() + removelist_index.at(i));
-		delete ent_ptr;
+		entitylist.erase(removelist_index.at(i));
 	}
 }
 int unsigned_to_signed(unsigned n) {
@@ -155,11 +154,13 @@ int unsigned_to_signed(unsigned n) {
 
 	throw - 3;
 }
-void Game::handleCollisions() const {
-	for each ( Entity* var in entitylist ) {
+void Game::handleCollisions()  {
+	for(int i = 0; i < entitylist.size();i++) {
+		Entity* var = entitylist.at(i);
 		Collidable* coll = dynamic_cast<Collidable*>( var );
 		if(coll) {
-			for each ( Entity* var1 in entitylist ) {
+			for  ( int j = 0; j < entitylist.size();j++ ) {
+				Entity* var1 = entitylist.at(j);
 				Collidable* coll1 = dynamic_cast<Collidable*>( var1 );
 				if(var1) {
 					if(coll->isColliding(coll1))
@@ -170,8 +171,5 @@ void Game::handleCollisions() const {
 	}
 }
 void Game::clear() {
-	for each ( Entity* var in entitylist ) {
-		delete var;
-	}
 	entitylist.clear();
 }

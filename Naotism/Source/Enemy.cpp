@@ -51,4 +51,5 @@ const sf::Vector2f Enemy::getVelocityOfType(int type)const {
 
 	}
 }
-void Enemy::collide(Collidable*& other) {}
+void Enemy::collide(Collidable*& other) {
+}

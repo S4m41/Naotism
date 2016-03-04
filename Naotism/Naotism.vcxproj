@@ -267,6 +267,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|ARM'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Source\Util.cpp" />
+    <ClCompile Include="Source\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\A-Bomb.png" />
@@ -290,6 +291,7 @@
     <ClInclude Include="Source\Game.h" />
     <ClInclude Include="Source\Player.h" />
     <ClInclude Include="Source\Util.h" />
+    <ClInclude Include="Source\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

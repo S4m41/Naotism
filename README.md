@@ -56,6 +56,13 @@ feb 26
 mar 3
 	added restartbutton, along with clear(). only highscore and balance lacking(have time?).
 	changed bell() to include wifth of curve as an aditonal arg. 2h
+mar 4
+	gutted timesystem, reimplemnted using sf::clock.
+	delta-balanced spawning of new enemies.
+	consolidated pseudo-enums to follow concurrent style(not pleased w result)
+	forgot to implement virtual destructors, implementing.
+	std::vector not allowed(????) making my own.
+	done, end of session. 3.5h
 ## >Log!< ##
 
 ## >Descr<##

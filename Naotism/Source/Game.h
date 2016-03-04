@@ -2,6 +2,7 @@
 #include <iostream>
 #include "SFML\Graphics.hpp"
 #include "Entity.h"
+#include "Vector.h"
 
 
 
@@ -29,7 +30,8 @@ public:
 	void clear();
 
 protected:
-	std::vector<Entity*> entitylist;
+
+	Vector_E entitylist;
 private:
 	int error;
 	int score = 0;
@@ -46,7 +48,7 @@ private:
 	virtual void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const;
 	void Game::clearDead();
 	void Game::spawnNew(float delta);
-	void Game::handleCollisions() const;
+	void Game::handleCollisions() ;
 
 	void Game::scarySprite(sf::RenderTarget& canvas)const;//for testing
 

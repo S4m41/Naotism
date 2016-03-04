@@ -60,6 +60,9 @@
     <ClCompile Include="frequencyTest.cpp">
       <Filter>Samai</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Vector.cpp">
+      <Filter>Samai\Naotism\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Placeholder.png">
@@ -116,6 +119,9 @@
     </ClInclude>
     <ClInclude Include="Source\Player.h">
       <Filter>Samai\Naotism\Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Vector.h">
+      <Filter>Samai\Naotism\Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
