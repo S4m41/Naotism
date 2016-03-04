@@ -116,15 +116,15 @@ void Game::spawnNew(float delta) {
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
-	if(score > 3500 && rand() % 100 < 50 * delta) {
+	if(score > 4000 && rand() % 100 < 50 * delta) {
 		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
 }
-//DOUBT
+
 void Game::clearDead() {
-	for(int i = 0; i < entitylist.size(); i++) {//DOUBT
+	for(int i = 0; i < entitylist.size(); i++) {
 		Entity* var = entitylist.at(i);
 		if(var->isDead()) {
 			Player* t1 = dynamic_cast<Player*>( var );
