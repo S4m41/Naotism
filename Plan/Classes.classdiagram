@@ -15,8 +15,6 @@
         <classMoniker Id="74ebcea9-73f3-413d-8713-d11cc52c50c0" LastKnownName="Distraction" />
       </annotatedElements>
     </comment>
-<<<<<<< HEAD
-=======
     <comment Id="fa80512a-da0b-4208-9109-aa8fc40ddbde">
       <elementDefinition Id="382f7263-a060-4156-bd7f-a935ce803f26" />
       <body>Could be full class</body>
@@ -24,7 +22,6 @@
         <classMoniker Id="efad00ef-7c65-481a-8143-a101a69e2c66" LastKnownName="struct spritehandler" />
       </annotatedElements>
     </comment>
->>>>>>> refs/remotes/origin/Local
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance Id="23653004-45c8-4698-9e66-c75520dda981" name="namespace" profile="CSharpProfile">
@@ -511,6 +508,9 @@
           <property Id="6a1c72a6-c88b-46a3-8f57-a600dc76e511" name="ErrorFlag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="3080a88c-66d6-4e45-9a3c-0bd1ba5b9c41" />
           </property>
+          <property Id="49c871c0-a485-42d8-b158-595af4324577" name="score" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="df8c592c-2d98-4a50-8958-b51e74d952d3" />
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="89320a8a-48ba-4b25-a162-53a56d46d263" name="draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -799,6 +799,9 @@
           </property>
           <property Id="5df9a60f-6762-4a51-9041-93d7b541e220" name="texture_ptr" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="8cc96ceb-0c2d-44cb-9db2-40f185323e1b" />
+          </property>
+          <property Id="a1fe4150-fbad-4647-b70d-052d206002c0" name="removeMe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="af6daa60-2b35-4593-91c7-cf5f841ec463" />
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
@@ -1224,60 +1227,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="710f26ae-7d82-4292-919e-d505bce5acaa" name="Player" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="1aea3da3-d38c-4871-a115-168adafcf0ee" />
-        <ownedAttributesInternal>
-          <property Id="4f007d1d-940e-4bc9-95a0-14d4dba0cbbe" name="score" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance Id="55941cc9-a94a-4908-ab6f-1fb657663caa" name="property" profile="CSharpProfile">
-                <elementDefinition Id="43d428b1-6b0e-49cb-aa02-c1f9b035f815" />
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="cc57895d-efcc-433b-b1cb-5e21a534665c">
-                    <propertyInstance Id="5faab058-492d-463a-ae2f-8219445b5ecd" name="ClrAttributes">
-                      <elementDefinition Id="654409a2-ee97-4954-95c8-e71c93c69dbe" />
-                    </propertyInstance>
-                    <elementDefinition Id="c1a6b0ee-6d13-4529-879e-1de583f36570" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="0d05e180-968f-43f7-a3ef-f9d0248de5c7">
-                    <propertyInstance Id="bba81813-ab56-4f07-9523-2700b6a934ed" name="Get" value="none">
-                      <elementDefinition Id="3b8b8c8d-ac6f-4b93-bba2-43acbdc3bdd5" />
-                    </propertyInstance>
-                    <elementDefinition Id="ed422ee6-83d7-45a5-84b8-5fd229944c2e" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="06e4770a-0175-461f-a8bc-f34e8410d4d1">
-                    <propertyInstance Id="6b69e308-aa4d-4255-9b5c-9e429d4e78a6" name="HasBody" value="false">
-                      <elementDefinition Id="92a2acc6-7927-4ddf-98fa-f5d5bba3bd82" />
-                    </propertyInstance>
-                    <elementDefinition Id="7ec6eb08-2a9e-47c6-ba5d-cf303a016a1a" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="661d2954-7544-4610-bf2c-24fdf2097aaf">
-                    <propertyInstance Id="f3df41ae-65c6-4c43-9cb2-ecc1362cbe5a" name="IsUnsafe" value="false">
-                      <elementDefinition Id="0ae5aa00-1761-4051-85fc-e4067b589ba2" />
-                    </propertyInstance>
-                    <elementDefinition Id="fda433ff-a780-4cda-bab6-24f2b078ee5a" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="e06c9af4-090b-4b51-97ab-be3f17e0dfdc">
-                    <propertyInstance Id="d7d617fc-247a-41e2-80c0-47281d9932c2" name="Inheritance" value="none">
-                      <elementDefinition Id="97de7618-8143-459b-970a-d6e3d22e6240" />
-                    </propertyInstance>
-                    <elementDefinition Id="43b8134c-646f-4e57-a761-45041d9cf78c" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="2a553228-4aa6-4072-bdaf-a1ac8bf13b92">
-                    <propertyInstance Id="a95041b8-0174-4b25-94c4-05eb1e4e2d9d" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="f16dfe89-4923-46c2-807e-610df59cfe9d" />
-                    </propertyInstance>
-                    <elementDefinition Id="a07927c2-c390-4c4d-8d7f-54d4e3db4033" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="0c90c599-5d2e-4227-a3e1-c307217e460d">
-                    <propertyInstance Id="4d7f6af4-15a9-4409-93e0-284ffb234882" name="Set" value="none">
-                      <elementDefinition Id="dea148a8-7701-4c10-b2a6-578463645269" />
-                    </propertyInstance>
-                    <elementDefinition Id="9bd1af72-cd23-4b26-80ca-9d035ff03186" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <elementDefinition Id="c0548adc-2d4f-4632-bc09-756d2359f97b" />
-          </property>
-        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="d05afbe2-3119-4afe-a237-da3fec6782f8" name="die" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <appliedStereotypesInternal>
@@ -1500,8 +1449,6 @@
         </ownedLiterals>
       </enumeration>
     </logicalClassDesignerModelHasTypes>
-<<<<<<< HEAD
-=======
     <logicalClassDesignerModelHasTypes>
       <enumeration Id="259cbf61-1903-4c19-b0cc-82eaf5d9ecc6" name="Spritehandler::Types" isAbstract="false" isLeaf="false">
         <elementDefinition Id="4288fd65-f060-419b-aebb-70898ecb8c60" />
@@ -1558,7 +1505,6 @@
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
->>>>>>> refs/remotes/origin/Local
   </packagedElements>
   <package Id="d89dab9e-a1df-4a30-8c10-a59e8a552f1f" name="Plan">
     <elementDefinition Id="2d44eabc-6ffa-4bae-9f0a-1a9558ee54f6" />

@@ -7,11 +7,5 @@ int main() {
 	e.init();
 
 	e.main_loop();
-
-
-
-	
-
-
 	return 0;
 }

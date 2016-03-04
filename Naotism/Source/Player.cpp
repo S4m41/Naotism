@@ -1,19 +1,41 @@
 #include "Player.h"
-Player::Player(float x , float y , sf::Vector2f velocity , int mass) : Collidable(x , y , velocity , mass), score(0) {}
+#include "Enemy.h"
+Player::Player(float x , float y , sf::Vector2f velocity , int mass) : Collidable(x , y , velocity , mass) {
+}
+Player::Player(const Player* /*&*/other) : Collidable(other) {
+}
 void Player::update(double delta) {
-	score += (int) ( delta += 0.5 );
+
+
 	sf::Vector2f vel = getVelocity();
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-		vel.x -= ( 1 * delta );
+		direction.x = -1;
 	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-		vel.x += ( 1 * delta );
+		direction.x = 1;
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-		vel.y -= ( 1 * delta );
-	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-		vel.y += ( 1 * delta );
+		//direction.y = -1;
+	} else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+		direction.x = 0;
+		//vel.x *= .5;
 	}
+
+	vel.x = speed.x * direction.x * delta;
+	vel.y = speed.y * direction.y * delta;
+	setVelocity(vel);
+	Collidable::update(delta);
 }
 const sf::Vector2i Player::getType()const {
 	return this->texture_strct.PLAYER;
+}
+Player* Player::clone()const {
+	return new Player(this);
+}
+void Player::collide( Collidable*& other) {
+	Entity* ent = other->clone();
+	Enemy* enemy = dynamic_cast<Enemy*>( ent );
+	if(enemy) {
+		remove_me = true;
+	}
+	delete ent;
 }

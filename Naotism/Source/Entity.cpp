@@ -3,10 +3,14 @@ Entity::Entity(float x , float y , sf::Vector2f velocity) :sf::Sprite() {
 	setPosition(x , y);
 	setVelocity(velocity);
 }
+Entity::Entity(const Entity* /*&*/ other):sf::Sprite() {
+	setPosition(other->getPosition());
+	setVelocity(other->getVelocity());
+}
 Entity::~Entity() {
 	delete txture_ptr;
 }
-sf::Vector2f Entity::getVelocity() {
+sf::Vector2f Entity::getVelocity()const {
 	return this->velocity;
 }
 void Entity::setVelocity(sf::Vector2f toSet) {
@@ -16,8 +20,6 @@ void Entity::setVelocity(float x , float y) {
 	setVelocity(sf::Vector2f(x , y));
 }
 void Entity::init() {
-	this->setPosition(50 , 50);
-
 
 	sf::Texture* texture = new sf::Texture();
 	sf::Image image;
@@ -35,4 +37,7 @@ void Entity::update(double delta) {
 }
 const sf::Vector2i Entity::getType()const {
 	return this->texture_strct.PLACEHOLDER;
+}
+const bool Entity::isDead() const{
+	return remove_me;
 }
