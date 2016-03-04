@@ -124,7 +124,6 @@ void Game::spawnNew(float delta) {
 }
 //DOUBT
 void Game::clearDead() {
-	std::vector<int> removelist_index;
 	for(int i = 0; i < entitylist.size(); i++) {//DOUBT
 		Entity* var = entitylist.at(i);
 		if(var->isDead()) {
@@ -137,13 +136,11 @@ void Game::clearDead() {
 #endif
 			} else
 				std::cout << "@Entity removed@" << std::endl;
-			removelist_index.push_back(i);
+			entitylist.erase(i);
+			i--;
 		}
 	}
-	for(int i = 0; i <removelist_index.size(); i++) {//DOUBT
-		Entity* ent_ptr = entitylist.at(removelist_index.at(i));
-		entitylist.erase(removelist_index.at(i));
-	}
+	
 }
 int unsigned_to_signed(unsigned n) {
 	if(n <= INT_MAX)
