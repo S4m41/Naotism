@@ -710,6 +710,9 @@
           <operation Id="d1969fe8-fd9a-44d4-b2ec-14d624d335c2" name="getErrors" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="a1811ec2-5557-4c27-9630-0a24203be203" />
           </operation>
+          <operation Id="be33b0ca-a924-474c-b058-44c6b88050b5" name="clear" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8fed34a7-93c0-45e4-8c99-88b0a8359962" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
