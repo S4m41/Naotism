@@ -34,6 +34,16 @@
           LastKnownLocation="Plan.uml" />
       </annotatedElements>
     </comment>
+    <comment
+      Id="fb65343f-ae46-424d-a31a-99578c7407d0">
+      <body>screensizes are only used as large</body>
+      <annotatedElements>
+        <enumerationMoniker
+          Id="ab473cd9-a15f-462f-a72b-abc0ee6c67be"
+          LastKnownName="Screensizes"
+          LastKnownLocation="Plan.uml" />
+      </annotatedElements>
+    </comment>
   </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance
@@ -599,6 +609,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="06c7eeca-0000-41f0-9bca-229135a19232"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="Screensizes"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="ab473cd9-a15f-462f-a72b-abc0ee6c67be"
+              LastKnownName="Screensizes"
+              LastKnownLocation="Plan.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fcdf8f54-dc28-4c50-895f-5857d0d42819"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e7e2e39f-e294-48bb-a0ab-1cd29812737c"
+                  name="Screensizes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -1089,6 +1138,14 @@
           <operation
             Id="a1811ec2-5557-4c27-9630-0a24203be203"
             name="getErrors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="24c4126e-2409-4a76-a2e2-d9cd8506e331"
+            name="clear"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2803,6 +2860,28 @@
             isComposite="false" />
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="ab473cd9-a15f-462f-a72b-abc0ee6c67be"
+        name="Screensizes"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="65f6593d-6bcc-4b06-b8fa-ecfbaebcb4d9"
+            name="large" />
+          <enumerationLiteral
+            Id="6ad13dcb-d3d1-469f-8b3d-f01033a7035d"
+            name="medium" />
+          <enumerationLiteral
+            Id="14c0fa37-ff05-4786-bd66-9a6eade9c474"
+            name="small" />
+          <enumerationLiteral
+            Id="75bbab09-f637-42f8-b625-0dcfd864f867"
+            name="fullscreen" />
+        </ownedLiterals>
+      </enumeration>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

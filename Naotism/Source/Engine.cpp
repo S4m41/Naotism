@@ -79,11 +79,13 @@ void Engine::main_loop() {
 
 }
 void Engine::fpsCount(long double updateLength) {
+	
 
 	lastFpsTime += updateLength;
 	fps++;
 	if(lastFpsTime >= RES) {
 		cout << "(FPS: " << fps << ")" << endl;
+		
 
 		lastFpsTime = 0;
 		fps = 0;

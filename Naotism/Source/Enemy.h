@@ -1,5 +1,17 @@
 #pragma once
 #include "Collidable.h"
+
+namespace ENEMY_TYPES{
+	enum TYPE
+	{
+		TOWEL = 1 ,
+		ROCK = 2 ,
+		SPACESHIP = 3 ,
+		A_BOMB = 4
+	};
+
+}
+
 class Enemy :public Collidable{
 public:
 public:
@@ -14,14 +26,5 @@ private:
 	int type;
 	/*static ??*/const sf::Vector2f Enemy::getVelocityOfType(int type)const;
 };
-namespace ENEMY_TYPES{
-	enum TYPE
-	{
-		ROCK = 2 ,
-		TOWEL = 1 ,
-		SPACESHIP = 3 ,
-		A_BOMB = 4
-	};
 
-}
 //Eenmy::type.rock
