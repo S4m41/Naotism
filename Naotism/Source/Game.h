@@ -26,9 +26,6 @@ public:
 	void Game::problem(Errors error);
 	int Game::getErrors() const;
 	void operator =( const Game& otherGame );
-
-	void clear();
-
 protected:
 
 	Vector_E entitylist;
@@ -48,11 +45,5 @@ private:
 	virtual void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const;
 	void Game::clearDead();
 	void Game::spawnNew(float delta);
-	void Game::handleCollisions() ;
-
-	void Game::scarySprite(sf::RenderTarget& canvas)const;//for testing
-
-
-
-
+	void Game::handleCollisions();
 };

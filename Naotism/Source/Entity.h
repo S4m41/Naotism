@@ -11,10 +11,10 @@ namespace Textures{
 	const sf::Vector2i ROCK = sf::Vector2i(2 , 0);
 	const sf::Vector2i TOWEL = sf::Vector2i(0 , 1);
 	const sf::Vector2i SPACESHIP = sf::Vector2i(1 , 1);
-	const sf::Vector2i A_BOMB = sf::Vector2i(2 , 1);
+	const sf::Vector2i A_BOMB = sf::Vector2i(2 , 1);/*
 	const sf::Vector2i DISTRACTION_1 = sf::Vector2i(0 , 2);
 	const sf::Vector2i DISTRACTION_2 = sf::Vector2i(1 , 2);
-	const sf::Vector2i DISTRACTION_3 = sf::Vector2i(2 , 2);
+	const sf::Vector2i DISTRACTION_3 = sf::Vector2i(2 , 2);*/
 }
 
 class Entity : public sf::Sprite{

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "SFML\Graphics.hpp"
-#include "Util.h"
 #include "Game.h"
 
 namespace SCREENSIZES{//should be enum // global var not good
@@ -10,28 +9,22 @@ namespace SCREENSIZES{//should be enum // global var not good
 	const sf::Vector2i MEDIUM = sf::Vector2i(950 , 500);
 	const sf::Vector2i SMALL = sf::Vector2i(190 , 100); 
 
-	//noo dont do this it is  not good style
-	const sf::Vector2i screensize_bad = LARGE;
+	//this is the current screensize|| 
+	const sf::Vector2i screensize_bad = FULLSCREEN;//noo dont do this it is  not good style
 }
 
 class Engine{
 	
 public:
-	Engine();
+	Engine() {}
 	
 	virtual ~Engine();
 
-
 	void Engine::init();
-	void Engine::init(Game* currGame);
+	_inline void Engine::init(Game* currGame);
 	void Engine::main_loop();
 
-	void operator =( const Engine& otherEngine );
-
 private:
-	
-	void handleWindowEvents();
-	void fpsCount(long double updatelength);
 
 	long double lastFpsTime;
 	int fps;  sf::Clock clock;
@@ -41,8 +34,7 @@ private:
 
 	sf::RenderWindow window;
 
-	sf::Vector2i screensize = SCREENSIZES::screensize_bad;
-	
+	sf::Vector2i screensize;
 };
 /*
 enum sf::vector2i screensizes{
@@ -51,7 +43,4 @@ enum sf::vector2i screensizes{
 	MEDIUM = sf::Vector2i(950 , 500);
 	SMALL = sf::Vector2i(190 , 100); 
 }
-
-
-
 */

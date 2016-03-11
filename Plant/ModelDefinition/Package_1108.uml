@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d63c4f11-cba3-4e72-b9a2-ada3083f6bb4"
+  name="Game Related" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="b17d7af9-30dd-4ead-b694-de6dd72ee771"
+        name="Game"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c5d6e9bb-520c-402a-b954-5c40020e5957"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="GOStat"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b2026d8a-72a3-4222-8b25-85dd373ef3d1"
+              LastKnownName="GOStat"
+              LastKnownLocation="Package_1108.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="32182469-f484-4da3-b50d-d5a7619c0394"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17497875-3d6d-45cd-b8e4-bea23876cb70"
+                  name="GOStat"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="476501a1-c3f3-4c6e-ada3-af818c8878c6"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="Errors"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="5fc424a3-78f2-4928-8093-70f6d2b31870"
+              LastKnownName="Errors"
+              LastKnownLocation="Package_1108.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="224d05b5-be56-464b-8acd-fa85e1ca9940"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="15c833b7-c49b-4068-88e3-6d8438897094"
+                  name="Errors"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="be90aac0-8295-455b-9eb9-70c0486ef3c3"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="Screensizes"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="05f566a6-b08d-45fe-a907-130fc8d45822"
+              LastKnownName="Screensizes"
+              LastKnownLocation="Plant.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="382cdae1-3a22-4a59-b07d-41880c60da64"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25726c70-3b97-451b-a7af-82ea9585125a"
+                  name="Screensizes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="edfb4016-ddbe-4ea1-b2b9-7a1c5992a3e8"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="Entity"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="89e210e2-888b-4d5d-9ccc-3c1f2a6e4c9b"
+              LastKnownName="Entity"
+              LastKnownLocation="Plant.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c852d1b-eb52-4c33-b410-7fd246b85065"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b663cb0c-1c0f-4f30-bff1-96ef13c56cb0"
+                  name="Entity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cb58650d-d279-4e37-954f-5738269600e2"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="Vector_E"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="653fe962-8aca-48a9-a0d1-2b25b8185fcb"
+              LastKnownName="Vector_E"
+              LastKnownLocation="Plant.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d9486693-bd52-4e59-86dc-07a2fe711cc2"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d22498f1-8051-4916-9b68-774f8f01012e"
+                  name="Vector_E"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="865bca99-43ab-4556-9f66-a2549f408cc3"
+            name="int error"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0dd31c13-ef7e-4718-a797-2cdfae1b1143"
+            name="int score"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4154eeec-ccb8-492f-838b-81130eb2d194"
+            name="GOStat GAMEOVER"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9a97ca7b-49c9-4474-884b-fb9b679f3661"
+            name="font"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a507e0ce-35ba-4858-a677-337c0b21d97d"
+            name="scoretext"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4b3dff4d-da65-4cde-bf6f-cf1cc8954138"
+            name="entitylist"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d17a49ef-a2ec-4467-bb99-88bdbb2b9afa"
+            name="init"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5dafc904-eab8-4288-bd1c-cf7d31d7c5c7"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ead5b853-eb7f-4586-990e-006b787eca05"
+                  name="float"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="16725ff0-2641-450f-b3ca-b87966f856c9"
+            name="isRunning"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a8fe15a6-7e2f-4dd3-9103-f69b5a0fb0c1"
+            name="problem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e848cb6b-423b-4f7f-ac03-21c5883cbe9e"
+                  name="Error"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0b25c879-1a42-479b-b89a-0645d02c43b8"
+            name="getErrors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d0f1cfe7-0f26-434a-9b29-aab616e1e93b"
+            name="operator="
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d38c1117-ac09-429a-9ada-a7c3ac94ee14"
+                  name="Game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0cdecdfd-0aee-4b83-9bed-d5b1f313a16f"
+            name="clearDead"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c5b49cb7-03ab-4076-befc-239298fc7226"
+            name="spawnNew"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="259952e8-7840-40e8-a05c-f963afdf0210"
+            name="handleCollisions"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2f4c4d2b-af52-4d2a-a339-e91cb5794e04"
+            name="Game"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1b2f1c87-8778-425f-a20d-0f5941b97c81"
+            name="Game"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="09aa10f5-9c6a-40db-9210-3d24f07170e5"
+            name="draw"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8ab26f28-0c54-4ae1-bf76-9d2a3dd94d52"
+                  name="RenderTarget"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3f31ea0d-d8c1-42b8-8bf4-b3f5a5a65da0"
+                  name="RenderStates"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="5e07f588-3faf-40e9-8347-41ec4718a75b"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="5fc424a3-78f2-4928-8093-70f6d2b31870"
+        name="Errors"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="5ee106de-1ba2-4a9e-9110-1113c3720465"
+            name="READ" />
+          <enumerationLiteral
+            Id="fc92e2b7-dce1-4f39-9e2c-14332c50f480"
+            name="FINE" />
+          <enumerationLiteral
+            Id="e663b1fb-aed0-4137-85b1-645f5970df98"
+            name="CLOSE" />
+          <enumerationLiteral
+            Id="cc6ba17e-d6e2-4019-9403-f89b8f537e41"
+            name="WRITE" />
+          <enumerationLiteral
+            Id="c2e8b9d0-dfca-444d-9b46-46607b468e52"
+            name="OTHER" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b2026d8a-72a3-4222-8b25-85dd373ef3d1"
+        name="GOStat"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ec160a93-b9d3-4e24-b7b4-e691194ff4f2"
+            name="int ttcooldown"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="af0a482e-a527-493c-8629-1bd333577c37"
+            name="bool gameover"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8c7f36b5-b361-4836-bd6d-acb9f66755c8"
+            name="const int cooldown"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

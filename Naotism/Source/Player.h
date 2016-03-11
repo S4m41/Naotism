@@ -1,10 +1,11 @@
 #pragma once
 #include "Collidable.h"
-#include "Engine.h"//please don't
+#include "Engine.h"
 class Player : public Collidable{
 public:
-	Player::Player(float x = SCREENSIZES::LARGE.x / 2 , float y = SCREENSIZES::LARGE.y - 64 , sf::Vector2f velocity = sf::Vector2f(0 , 0) , int mass = 0);
-	Player::Player(const Player* /*&*/other);
+	Player::Player(float x = SCREENSIZES::screensize_bad.x / 2 , float y = SCREENSIZES::screensize_bad.y - 64 
+		, sf::Vector2f velocity = sf::Vector2f(0 , 0) , int mass = 0) :Collidable(x,y,velocity,mass){}
+	Player::Player(const Player* other) :Collidable(other){}
 	virtual void Player::update(float delta);//override
 	virtual Player* Player::clone()const;
 	virtual void Player::collide( Collidable*& other);
