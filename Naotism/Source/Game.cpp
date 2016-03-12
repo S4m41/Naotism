@@ -2,20 +2,14 @@
 #include "Player.h"
 #include "Enemy.h"
 #include <string>
-#include "Engine.h"//noo don't
-#define IMMORTAL 0
-int unsigned_to_signed(unsigned n) throw( ... );
+double bell(int tick , int i , int max = 5);
 Game::Game() {
 	error = Errors::Fine;
 }
 Game::~Game() {
-	for each ( Entity* var in entitylist ) {
-		delete var;
-	}
+	entitylist.clear();
 }
 void Game::init() {
-
-	//Entity* ent_ptr = new Enemy(1);
 	if(!font.loadFromFile("Resources/GARA.ttf")) {
 		std::cout << "font not found" << std::endl;
 		error = error | Errors::Read;
@@ -33,25 +27,23 @@ void Game::init() {
 		}
 		error = error | Errors::Read;
 	}
-
 	this->entitylist.push_back(ent_ptr);
 }
-//################################################
 void Game::update(float delta) {
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 		problem(Close);
 	}
 	if(!GAMEOVER.gameover) {
-		score += 1 + (int) (1+ delta + 0.5 );
+		score += 1 + (int) ( 1 + delta + 0.5 );
 		scoretxt.setString(std::to_string(score));
 
-		for each ( Entity* var in entitylist ) {
+		for(int i = 0; i < entitylist.size(); i++) {
+			Entity* var = entitylist.at(i);
 			var->update(delta);
 		}
 		handleCollisions();
 		spawnNew(delta);
 		clearDead();
-		//std::cout << "|";
 	} else {
 		std::string s = ( " you scored :" + std::to_string(score) );
 		s += "\nGAME OVER! Press n to start anew";
@@ -61,26 +53,23 @@ void Game::update(float delta) {
 			GAMEOVER.ttcooldown = 0;
 			scoretxt.setColor(sf::Color(rand() % 256 , rand() % 256 , rand() % 256));
 		}
-
 		if(sf::Keyboard::isKeyPressed(sf::Keyboard::N)) {
 			score = 0;
 			GAMEOVER.gameover = false;
-			clear();
+			//rensa alla entities i listan
+			entitylist.clear();
+			//initiera om game
 			init();
 		}
 	}
 }
-//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 void Game::draw(sf::RenderTarget& canvas , sf::RenderStates states)const {
-	for each ( Entity* var in entitylist ) {
+	for(int i = 0; i < entitylist.size(); i++) {
+		Entity* var = entitylist.at(i);
 		canvas.draw(*var);
 	}
 	canvas.draw(scoretxt);
-
-
-	//scarySprite(canvas);
 }
-//################################################
 bool Game::isRunning() const {
 	return ( !( Fine^error ) );
 }
@@ -94,84 +83,55 @@ void Game::operator =( const Game& otherGame ) {
 	this->error = otherGame.error;
 }
 void Game::spawnNew(float delta) {
-	double d = bell(score , 500) , e = bell(score , 1500) , f = bell(score , 2500) , g = bell(score , 3500);
-	if(rand() % 100 < d*delta) {
+	double d = bell(score , 500) , e = bell(score , 1500) , f = bell(score , 2500) , g = bell(score , 3500),match = rand() % 100;
+	Entity* ent_ptr = nullptr;
 
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
-		ent_ptr->init();
-		entitylist.push_back(ent_ptr);
+	if(match< d*delta) {
+		ent_ptr = new Enemy(ENEMY_TYPES::TOWEL , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
+	}else if(match< e *delta) {
+		 ent_ptr = new Enemy(ENEMY_TYPES::ROCK , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
+	}else if(match< f *delta) {
+		ent_ptr = new Enemy(ENEMY_TYPES::SPACESHIP , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
+	}else if(match< g *delta || ( score > 4000 && match < 50 * delta )) {
+		ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
 	}
-	if(rand() % 100 < e *delta) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::ROCK , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
-		ent_ptr->init();
-		entitylist.push_back(ent_ptr);
-	}
-	if(rand() % 100 < f *delta) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::SPACESHIP , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
-		ent_ptr->init();
-		entitylist.push_back(ent_ptr);
-	}
-	if(rand() % 100 < g *delta) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
-		ent_ptr->init();
-		entitylist.push_back(ent_ptr);
-	}
-	if(score > 3500 && rand() % 100 < 50 * delta) {
-		Entity* ent_ptr = new Enemy(ENEMY_TYPES::A_BOMB , (float) ( rand() % SCREENSIZES::screensize_bad.x ) , 0);
+
+	if(ent_ptr) {
 		ent_ptr->init();
 		entitylist.push_back(ent_ptr);
 	}
 }
-//DOUBT
+
 void Game::clearDead() {
-	std::vector<int> removelist_index;
-	for(int i = 0; i < unsigned_to_signed(entitylist.size()); i++) {//DOUBT
+	for(int i = 0; i < entitylist.size(); i++) {
 		Entity* var = entitylist.at(i);
 		if(var->isDead()) {
 			Player* t1 = dynamic_cast<Player*>( var );
 			if(t1) {
 				//game over
-#if !IMMORTAL
 				std::cout << "GAME OVER" << std::endl;
 				GAMEOVER.gameover = true;
-#endif
-			} else
+			} else {
 				std::cout << "@Entity removed@" << std::endl;
-			removelist_index.push_back(i);
-		}
-	}
-	for(int i = 0; i < unsigned_to_signed(removelist_index.size()); i++) {//DOUBT
-		Entity* ent_ptr = entitylist.at(removelist_index.at(i));
-		entitylist.erase(entitylist.begin() + removelist_index.at(i));
-		delete ent_ptr;
-	}
-}
-int unsigned_to_signed(unsigned n) {
-	if(n <= INT_MAX)
-		return static_cast<int>( n );
-
-	if(n >= INT_MIN)
-		return static_cast<int>( n - INT_MIN ) + INT_MIN;
-
-	throw - 3;
-}
-void Game::handleCollisions() const {
-	for each ( Entity* var in entitylist ) {
-		Collidable* coll = dynamic_cast<Collidable*>( var );
-		if(coll) {
-			for each ( Entity* var1 in entitylist ) {
-				Collidable* coll1 = dynamic_cast<Collidable*>( var1 );
-				if(var1) {
-					if(coll->isColliding(coll1))
-						coll->collide(coll1);
-				}
+				entitylist.erase(i);
+				i--;
 			}
 		}
 	}
 }
-void Game::clear() {
-	for each ( Entity* var in entitylist ) {
-		delete var;
+void Game::handleCollisions() {
+	for(int i = 0; i < entitylist.size(); i++) {
+		/*Collidable* coll = dynamic_cast<Collidable*>( entitylist.at(i) );*/
+		Player* coll = dynamic_cast<Player*>( entitylist.at(i) );
+		for(int j = 0; coll && j < entitylist.size(); j++) {
+			Collidable* coll1 = dynamic_cast<Collidable*>( entitylist.at(j) );
+			if(coll1 && coll->isColliding(coll1)) {
+				coll->collide(coll1);
+			}
+		}
 	}
-	entitylist.clear();
+}
+double bell(int tick , int i/*peak*/ , int max) {
+	const double c = pow(3 * 225 , 2);//bell width
+	return ( max * exp(-( pow(tick - i , 2) / c )) );
 }

@@ -20,17 +20,21 @@ void Entity::setVelocity(float x , float y) {
 	setVelocity(sf::Vector2f(x , y));
 }
 void Entity::init() {
-
 	sf::Texture* texture = new sf::Texture();
 	sf::Image image;
 	image.create(1000 , 1000);
 
 	if(!image.loadFromFile("Resources\\spritesheet.png"))throw - 12;
 	sf::Vector2i typerect = getType();
-	( *texture ).loadFromImage(image , sf::IntRect(Textures::spritesize.x*typerect.x , Textures::spritesize.y*typerect.y , Textures::spritesize.x , Textures::spritesize.y));
+	sf::IntRect rect = sf::IntRect(
+		Textures::spritesize.x*typerect.x , Textures::spritesize.y*typerect.y , 
+		Textures::spritesize.x , Textures::spritesize.y);
+	( *texture ).loadFromImage(image , rect);
 
 	this->setTexture(*texture);
 	txture_ptr = texture;
+
+	this->setOrigin(rect.width/2,this->getOrigin().y);
 }
 void Entity::update(float delta) {
 	move(velocity);

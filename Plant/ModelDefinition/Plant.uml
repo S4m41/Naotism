@@ -1,0 +1,966 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1bbe7bf7-3390-4d8c-a40e-f633e97d741e"
+  name="Plant" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="772e4a4f-1297-4de6-abec-10cde715b453"
+        name="Engine"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="1a5ff773-c3af-4538-879f-c70d6aa64ec7"
+            isDerived="false"
+            sourceEndRoleName="Engine"
+            targetEndRoleName="Game"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b17d7af9-30dd-4ead-b694-de6dd72ee771"
+              LastKnownName="Game"
+              LastKnownLocation="Package_1108.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7813c8d4-ceb0-49f4-b670-315ca6a0785c"
+                  name="Engine"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b0cf872d-6fdd-42cc-873e-2f493e945f93"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6e5a7877-eeb1-4283-b634-a193ae7e5a5e"
+            isDerived="false"
+            sourceEndRoleName="Engine"
+            targetEndRoleName="Screensizes"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="05f566a6-b08d-45fe-a907-130fc8d45822"
+              LastKnownName="Screensizes"
+              LastKnownLocation="Plant.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="63b4a73b-2705-462c-a501-2c44e5c86515"
+                  name="Engine"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9fe23dac-0dba-4d30-a9f4-52041055003a"
+                  name="Screensizes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f8b080ea-fcd0-4460-a194-03f295f9c236"
+            name="Vector2i screensize"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="3b2b4072-ecbc-403e-afc5-c79113d4293a"
+            name="long double lastFpsTime"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="634ef643-5b45-467a-8825-69de3e592ce0"
+            name="fps"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="be65cef5-b44b-4c04-a8bc-9f2ba4b8e379"
+            name="const TARGET_FPS"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e52d5612-ab94-4dfd-a67a-bf9cfb5bf431"
+            name="clock"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d441036e-5d25-47dd-bb2f-3004eda277c8"
+            name="Game myGame"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1a6b0b35-3632-4d37-825c-f20d5cc11b35"
+            name="RenderWindow window"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3b3ebb50-7e00-4090-8b08-f529bb3850e9"
+            name="Engine"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9f02b87b-8670-433b-a943-d853ef03975d"
+            name="Engine"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="db825522-3aca-4a9a-89ca-3388dfe0be95"
+            name="init"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0fb4937e-3902-40ec-9b75-7f2f0875474a"
+            name="init"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="abf533cc-2dde-4f99-9f9e-070d35eadec0"
+                  name="Game"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d63c4f11-cba3-4e72-b9a2-ada3083f6bb4"
+        LastKnownName="Game Related"
+        LastKnownLocation="Package_1108.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="653fe962-8aca-48a9-a0d1-2b25b8185fcb"
+        name="Vector_E"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="74dcb85b-be44-405f-ab41-84f0aa329c84"
+            name="Entity** arr"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8da274fe-3a98-41dd-ab19-8b240b042ea9"
+            name="int capacity"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7754bdce-a9d7-4aaa-ba44-674769fcbd84"
+            name="contains"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="013b373c-33da-4f00-93f0-5c438492d1c8"
+            name="expand"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c5aaaf49-42f7-4bfd-9074-31f3b9051493"
+            name="clear"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8abed975-6119-424c-b1ff-574c85a3b708"
+            name="push_back"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e9b04082-3bd1-43c0-b9fe-b69f8caab739"
+                  name="Entity* e"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="319732cb-3d5b-45e4-ae51-1ddc4674c2ff"
+            name="at"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a17b2539-3b4e-46e9-ada9-77fc4224a463"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="db553fb3-eabc-45bf-b37f-f2578a12c963"
+            name="size"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6fa535d9-b1f5-4f5c-933c-1f81e1ce037c"
+            name="Vector_E"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2d40cb0f-a7d4-4177-9372-dcd74a50c9d0"
+            name="Vector_E"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e1326b2a-54f2-41cc-8404-c2c26f390a4e"
+        name="sf::Drawable"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="90a9e6bb-cdd0-448a-8d34-547ed39e84af"
+            isSubstitutable="false">
+            <classMoniker
+              Id="b17d7af9-30dd-4ead-b694-de6dd72ee771"
+              LastKnownName="Game"
+              LastKnownLocation="Package_1108.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="236007b6-2175-43f6-a6ad-e35824d22cb0"
+        name="sf::Sprite"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="b1d7cd0b-ce06-4804-a899-0f89b1d7d2bf"
+            isSubstitutable="false">
+            <classMoniker
+              Id="89e210e2-888b-4d5d-9ccc-3c1f2a6e4c9b"
+              LastKnownName="Entity"
+              LastKnownLocation="Plant.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="89e210e2-888b-4d5d-9ccc-3c1f2a6e4c9b"
+        name="Entity"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="b0caeaac-3e11-4795-9e91-d7a785b3522c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="8c289b2a-e50b-467c-b214-9f688a03cb36"
+              LastKnownName="Collidable"
+              LastKnownLocation="Plant.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="935d6ee0-a841-4089-982e-548f156931e3"
+            name="remove_me"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="da1ba2fc-0a70-4692-ae1d-81788ad1e483"
+            name="Vector2f velocity"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0ef052c3-b9a5-4597-bcd0-e5f5294918a8"
+            name="Texture* txture_ptr"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3e61b105-34a4-4f08-9445-18b369d795bf"
+            name="Vector2i getType"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d2a973a9-0ee5-4212-93f1-12b3e684cce3"
+            name="isDead"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d80f70bb-fc95-4fc7-af2f-1a5b79916a8b"
+            name="update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="341444a6-c9cd-481f-a8bc-b8dcdaa13236"
+                  name="float"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f1d41444-62e7-451d-87c9-1a03279b97f6"
+            name="init"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ec4e61bc-bf0e-4438-9348-0bf52e6d5174"
+            name="getVelocity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="be9937b4-322c-4508-b324-0e3239867af5"
+            name="setVelocity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9fa6985a-d32b-48c6-b0b8-2c806b69005f"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ac003123-0219-4b8c-a5b3-9615787118e2"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3a3c8adc-3018-470c-a498-b4cfbf58de8b"
+            name="setVelocity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0c61ce13-b344-46a2-ad1c-652635cfe39c"
+                  name="Vector2f"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c32b0972-1790-4297-aac3-9fae8a6ec33e"
+            name="Entity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a0a89012-a54f-443c-980f-4f956950bf01"
+                  name="Entity"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="15caf50d-129f-4330-86f3-f520e9b7dcb5"
+            name="Entity"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6b1437e-28ee-4a97-b2ad-ccbc55c623ea"
+                  name="float"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ac80f704-57c2-4404-879d-dd1389d92afb"
+                  name="float"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7d870f86-63a3-49b6-b3c3-060c96dc237e"
+                  name="Vector2f"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e5f304c8-c054-4b98-909e-12fd44f302c0"
+            name="Entity"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0b183af0-6b6e-44c9-8027-9745c45d4e85"
+            name="clone"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8c289b2a-e50b-467c-b214-9f688a03cb36"
+        name="Collidable"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="16370c2e-3d91-4161-ae4e-9efbb3c8646d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="572e4c3b-3e13-4825-921b-78b11eb0387d"
+              LastKnownName="Player"
+              LastKnownLocation="Plant.uml" />
+          </generalization>
+          <generalization
+            Id="609a2538-9727-45b4-b40a-50578a001d51"
+            isSubstitutable="false">
+            <classMoniker
+              Id="98d0a833-e429-4201-819d-7444fc92a4dd"
+              LastKnownName="Enemy"
+              LastKnownLocation="Plant.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="39368d85-4839-47e7-b1e3-5e45e34b5d1e"
+            name="mass"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="30e6b1a8-041d-4ce8-a3a0-1a9d2349d34f"
+            name="collide"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c005dbbd-f9c1-492c-8716-24769192904e"
+                  name="Collidable"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7546bb2a-9e02-4cd7-843b-d67f78e149e7"
+            name="isColliding"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7c3e424e-801f-424a-bb3e-21abde00a40b"
+                  name="Collidable"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="98d0a833-e429-4201-819d-7444fc92a4dd"
+        name="Enemy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="cb403d08-2a92-4b06-af7f-7dd3bcce7322"
+            isDerived="false"
+            sourceEndRoleName="Enemy"
+            targetEndRoleName="EnemyTypes"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="f014a279-2733-4ba5-a999-6e9979ce84f0"
+              LastKnownName="EnemyTypes"
+              LastKnownLocation="Plant.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dd53f6ec-461c-4a65-bcf7-3be5a9dadb9a"
+                  name="Enemy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e29ea12-0ce7-4198-a4f9-0c5c797ca493"
+                  name="EnemyTypes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="c9981694-1954-436b-b0a1-8e00eb4653e0"
+            name="type"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5fab1ae5-c480-4ffb-a70c-863fcc572768"
+            name="getVelocityOfType"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="aae9e22c-e0d9-45bc-901a-429fde73234b"
+            name="Enemy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5d8ec9ad-48b2-4268-9fc8-9ebabb22b02c"
+                  name="int type"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b978fc2c-79be-4866-a270-e906c5aa0010"
+                  name="float"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7a92f089-94b5-4b0c-a628-a2a7f15f7ad1"
+                  name="float"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3ea1f793-e104-46dd-9532-7a3134b70ed5"
+                  name="mass"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="572e4c3b-3e13-4825-921b-78b11eb0387d"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="8342fe4f-2393-460f-be95-650b9bdb95bf"
+            name="Vector2i direction"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f4cf262c-fb54-4304-bc38-f14c9aee7e29"
+            name="Vector2f speed"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="f014a279-2733-4ba5-a999-6e9979ce84f0"
+        name="EnemyTypes"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="d0c076f4-8b94-4350-a15f-04860fb46197"
+            name="TOWEL" />
+          <enumerationLiteral
+            Id="18fcdb8c-e7a1-48f3-bd7d-f6ae0d9afe46"
+            name="ROCK" />
+          <enumerationLiteral
+            Id="1fdcb703-bb6c-450d-b111-89d1ea9c6f18"
+            name="A_BOMB" />
+          <enumerationLiteral
+            Id="8ee93e73-05bd-45f0-94aa-98436071d081"
+            name="SPACESHIP" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="05f566a6-b08d-45fe-a907-130fc8d45822"
+        name="Screensizes"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="df669242-ccb4-4d03-949f-ba89ae2e8dd0"
+            isDerived="false"
+            sourceEndRoleName="Screensizes"
+            targetEndRoleName="Player"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="572e4c3b-3e13-4825-921b-78b11eb0387d"
+              LastKnownName="Player"
+              LastKnownLocation="Plant.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82c259e1-caf2-4f5a-bf81-a530f1d86f24"
+                  name="Screensizes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e11b0fe7-fbd4-4776-87ab-837ec2b4a3e7"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="c8c26ce4-91f7-4de4-bb04-a78ffcb805bd"
+            name="FULLSCREEEN" />
+          <enumerationLiteral
+            Id="092fe0ac-fc04-4c13-93b7-1514cbaf4c11"
+            name="LARGE" />
+          <enumerationLiteral
+            Id="2bf3ad5f-2e80-4e57-9e51-b9ae1ab38bcc"
+            name="MEDIUM" />
+          <enumerationLiteral
+            Id="f91180b3-3684-465a-b244-a1aa1457df18"
+            name="SMALL" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

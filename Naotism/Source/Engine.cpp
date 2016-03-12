@@ -3,25 +3,21 @@
 #define RES (10e2)
 using namespace std;
 
-Engine::Engine() {
-}
 Engine::~Engine() {
 	delete myGame;
-
 }
 
 void Engine::init() {
 	init(new Game());
 }
-void Engine::init(Game* currGame) {
+_inline void Engine::init(Game* currGame) {
 	lastFpsTime = 0;
 	fps = 0;
-	window.create(sf::VideoMode(screensize.x , screensize.y) , "Naotism" , sf::Style::Titlebar | sf::Style::Close);
+	screensize = SCREENSIZES::screensize_bad;
+	window.create(sf::VideoMode(screensize.x , screensize.y) , "Naotism - " , sf::Style::Titlebar | sf::Style::Close);
 	window.setFramerateLimit(65);
 	window.setVerticalSyncEnabled(false);
 	currGame->init();
-
-	//currGame->problem(Errors::Close);
 	this->myGame = currGame;
 
 }
@@ -31,18 +27,16 @@ void Engine::main_loop() {
 		myGame->problem(Errors::Other);
 		std::cout << "Failed to create doublebuffer" << std::endl;
 		throw - 11;
-		// error...
 	}
 
 	typedef long double ld;
 	clock.restart();
 	const ld OPTIMAL_TIME = RES / this->TARGET_FPS;
 	
-
 	//main loop
 	while(this->myGame->isRunning() && window.isOpen()) {
 		sf::Int32 updateLength = clock.restart().asMilliseconds();
-		float delta = updateLength / ( (double) OPTIMAL_TIME );
+		float delta = updateLength / ( (float) OPTIMAL_TIME );
 
 		sf::Event event;
 		while(window.pollEvent(event)) {
@@ -50,15 +44,12 @@ void Engine::main_loop() {
 				window.close();
 		}
 
-		
-		
-
 		// update the game logic
 		myGame->update(delta);
 
-		// drawing uses the same functions
+		// drawing 
 		renderTexture.clear();
-		renderTexture.draw(*myGame); // or any other drawable
+		renderTexture.draw(*myGame); 
 		renderTexture.display();
 
 		// get the target texture (where the stuff has been drawn)
@@ -68,50 +59,16 @@ void Engine::main_loop() {
 		sf::Sprite sprite(texture);
 		window.draw(sprite);
 		window.display();
-		//fpscounter
-		//fpsCount(updateLength);
 		lastFpsTime += updateLength;
-		float Framerate = 1.f / clock.getElapsedTime().asMilliseconds();
+		fps++;
 		if(lastFpsTime >= RES) {
-
-			cout << "(FPS: " << std::to_string(1.f / Framerate) << ")" << endl;
+			cout << "(FPS: " << std::to_string(fps) << ")" << endl;
 
 			lastFpsTime = 0;
 			fps = 0;
-
 		}
-
 	}
 	if(!myGame->isRunning()) {
 		std::cout << myGame->getErrors() << std::endl;
 	}
-
-
 }
-void Engine::fpsCount(long double updateLength) {
-	
-
-	lastFpsTime += updateLength;
-	fps++;
-	int s = clock.restart().asSeconds();
-	if(lastFpsTime >= RES) {
-		
-		cout << "(FPS: " << std::to_string(1.f/s) << ")" << endl;
-
-		lastFpsTime = 0;
-		fps = 0;
-
-	}
-}
-void Engine::handleWindowEvents() {
-
-	//windowevents
-	sf::Event event;
-	while(window.pollEvent(event)) {
-		if(event.type == sf::Event::Closed)
-			window.close();
-	}
-	cout << "<";
-
-}
-
