@@ -5,10 +5,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{c983876b-d154-4cdf-8a3b-dfed2daee6a2}</ProjectGuid>
+    <ProjectGuid>{1f586d79-3b46-4c6b-8ac1-4fae7b67d493}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
-    <Name>Plan</Name>
-    <RootNamespace>Plan</RootNamespace>
+    <Name>Plant</Name>
+    <RootNamespace>Plant</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -20,30 +20,20 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'freqtest' ">
-    <OutputPath>bin\freqtest\</OutputPath>
-  </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="Classes.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Classes.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Classes.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="Logic.activitydiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Logic.activitydiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Logic.activitydiagram</DependentUpon>
-    </Content>
     <Folder Include="ModelDefinition\" />
-    <Content Include="ModelDefinition\Package_1620.uml">
+    <Content Include="ClassDiagram.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ModelDefinition\Plan.uml">
+    <Content Include="ClassDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagram.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package_1108.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Plant.uml">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

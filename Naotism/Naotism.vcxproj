@@ -235,24 +235,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="frequencyTest.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|ARM'">false</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="Source\Collidable.cpp" />
-    <ClCompile Include="Source\Distraction.cpp" />
     <ClCompile Include="Source\Enemy.cpp" />
     <ClCompile Include="Source\Engine.cpp" />
     <ClCompile Include="Source\Entity.cpp" />
     <ClCompile Include="Source\Game.cpp" />
-    <ClCompile Include="Source\imgio.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|ARM'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="Source\main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|Win32'">true</ExcludedFromBuild>
@@ -260,13 +247,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|ARM'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Source\Player.cpp" />
-    <ClCompile Include="Source\STFML.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='freqtest|ARM'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="Source\Util.cpp" />
+    <ClCompile Include="Source\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\A-Bomb.png" />
@@ -283,13 +264,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Collidable.h" />
-    <ClInclude Include="Source\Distraction.h" />
     <ClInclude Include="Source\Enemy.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\Entity.h" />
     <ClInclude Include="Source\Game.h" />
     <ClInclude Include="Source\Player.h" />
-    <ClInclude Include="Source\Util.h" />
+    <ClInclude Include="Source\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

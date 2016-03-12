@@ -24,12 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\imgio.cpp">
-      <Filter>Samai</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\STFML.c">
-      <Filter>Samai</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Engine.cpp">
       <Filter>Samai\Naotism\Source</Filter>
     </ClCompile>
@@ -38,12 +32,6 @@
     </ClCompile>
     <ClCompile Include="Source\main.cpp">
       <Filter>Samai\Naotism\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Util.cpp">
-      <Filter>Samai\Naotism\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Distraction.cpp">
-      <Filter>Samai\Naotism\Source\Entities</Filter>
     </ClCompile>
     <ClCompile Include="Source\Collidable.cpp">
       <Filter>Samai\Naotism\Source\Entities</Filter>
@@ -57,8 +45,8 @@
     <ClCompile Include="Source\Player.cpp">
       <Filter>Samai\Naotism\Source\Entities</Filter>
     </ClCompile>
-    <ClCompile Include="frequencyTest.cpp">
-      <Filter>Samai</Filter>
+    <ClCompile Include="Source\Vector.cpp">
+      <Filter>Samai\Naotism\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,17 +81,11 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Util.h">
-      <Filter>Samai\Naotism\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Game.h">
       <Filter>Samai\Naotism\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Source\Engine.h">
       <Filter>Samai\Naotism\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Distraction.h">
-      <Filter>Samai\Naotism\Headers\Entities</Filter>
     </ClInclude>
     <ClInclude Include="Source\Collidable.h">
       <Filter>Samai\Naotism\Headers\Entities</Filter>
@@ -116,6 +98,9 @@
     </ClInclude>
     <ClInclude Include="Source\Player.h">
       <Filter>Samai\Naotism\Headers\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Vector.h">
+      <Filter>Samai\Naotism\Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

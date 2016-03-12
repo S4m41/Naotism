@@ -9,7 +9,6 @@ namespace ENEMY_TYPES{
 		SPACESHIP = 3 ,
 		A_BOMB = 4
 	};
-
 }
 
 class Enemy :public Collidable{
@@ -24,7 +23,5 @@ protected:
 	const virtual sf::Vector2i Enemy::getType()const;
 private:
 	int type;
-	/*static ??*/const sf::Vector2f Enemy::getVelocityOfType(int type)const;
+	/*static ??*/_inline const sf::Vector2f Enemy::getVelocityOfType(int type)const;
 };
-
-//Eenmy::type.rock
